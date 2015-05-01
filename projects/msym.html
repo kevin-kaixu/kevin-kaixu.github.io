@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Multiscale symmetry - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Useful Links</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<br />
+<br />
+<table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
+      </font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="width: 220px; height: 82px;" alt="SIGA12_logo" src="msym/siga12_logo_s.jpg" /> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
+      </span></font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial;">Multi-Scale Partial Intrinsic
+Symmetry Detection<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;"><br />
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu<small><sup>1,2</sup></small>,&nbsp;
+Hao Zhang<small><sup>3</sup></small>,&nbsp; Wei Jiang<small><sup>1</sup></small>,&nbsp;
+      </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Ramsay Dyer</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>4</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">,&nbsp; </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Zhiquan Cheng</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>1</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">,&nbsp; </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Ligang Liu</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;" /></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>5</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;" /></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;" /></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">,&nbsp; </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Baoquan Chen</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+      <br />
+      <br />
+      <span style="font-family: Arial;" /></span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup></big><big style="color: rgb(255, 255, 214);">National
+University of
+Defense Technology</big><big style="color: rgb(255, 255, 214);">,</big><big style="color: rgb(255, 255, 214);">&nbsp;&nbsp;&nbsp;&nbsp; </big><big style="color: rgb(255, 255, 214);"><sup>2</sup>Shenzhen
+VisuCA Key
+Lab/SIAT</big><big style="color: rgb(255, 255, 214);">,</big><big style="color: rgb(255, 255, 214);"><br />
+      <sup>3</sup></big><big style="color: rgb(255, 255, 214);">Simon
+Fraser </big><big style="color: rgb(255, 255, 214);">University</big><big style="color: rgb(255, 255, 214);">,</big><big style="color: rgb(255, 255, 214);">&nbsp;&nbsp;&nbsp;&nbsp; </big><big style="color: rgb(255, 255, 214);"><sup>4</sup></big><big style="color: rgb(255, 255, 214);">INRIA,
+Geometrica,&nbsp;&nbsp;&nbsp;&nbsp; <sup>5</sup>University of Science
+and Technology of China</big><br />
+      <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+      <br />
+      </font><big style="color: rgb(255, 255, 214);">ACM Transactions
+on Graphics (SIGGRAPH Asia 2012), 31(6)</big><br />
+      <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+      <br />
+      </span></font><br />
+      </div>
+      <div style="text-align: center;"><img style="width: 900px; height: 260px;" alt="teaser" src="msym/teaser.PNG" /></div>
+      <div style="text-align: justify; margin-left: 23px; width: 899px;"><big style="color: rgb(255, 255, 214);"><br />
+      <span style="font-weight: bold;">Figure 1:</span> Multi-scale
+partial intrinsic symmetry detection: five symmetry scales (large to
+small) are detected. Each symmetric region is shown in uniform color.
+Note the detection of inter- and intra-object symmetries, as well as
+cylindrical symmetry of the limbs.</big></div>
+      <br />
+      <br />
+      <br />
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 744px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; width: 99px; height: 7px;"><small>
+            </small>
+            <div style="text-align: right;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Abstract</small></font></small></div>
+            <small> </small></td>
+            <td style="vertical-align: top; width: 753px; height: 7px;">
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We present an algorithm for
+multi-scale partial intrinsic symmetry detection over 2D and 3D shapes,
+where the scale of a symmetric region is defined by intrinsic distances
+between symmetric points over the region. To identify prominent
+symmetric regions which overlap and vary in form and scale, we decouple
+scale extraction and symmetry extraction by performing two levels of
+clustering. First, significant symmetry scales are identified by
+clustering sample point pairs from an input shape. Since different
+point pairs can share a common point, shape regions covered by points
+in different scale clusters can overlap. We introduce the symmetry
+scale matrix (SSM), where each entry estimates the likelihood two point
+pairs belong to symmetries at the same scale. The pair-to-pair symmetry
+affinity is computed based on a pair signature which encodes scales. We
+perform spectral clustering using the SSM to obtain the scale clsters.
+Then for all points belonging to the same scale cluster, we perform the
+second-level spectral clustering, based on a novel point-to-point
+symmetry affinity measure, to extract partial symmetries at that scale.
+We demonstrate our algorithm on complex shapes possessing rich
+symmetries at multiple scales.</big><br />
+            <big style="color: rgb(255, 255, 214);"> </big></div>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; height: 134px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
+            <small>Paper</small></font></td>
+            <td style="vertical-align: top; height: 134px; width: 753px;">
+            <table style="text-align: left; height: 235px; width: 556px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; width: 122px;">
+                  <div id="main2"><a href="../papers/xu_siga12_msym.pdf"><img style="border: 0px solid ; width: 120px; height: 223px;" alt="Paper PDF" title="Paper PDF" src="msym/paper.PNG" /></a></div>
+                  </td>
+                  <td style="vertical-align: top; width: 408px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
+                  <br />
+                  <br />
+                  <a style="font-weight: bold;" href="../papers/xu_siga12_msym.pdf">PDF, 16MB</a><span style="font-weight: bold;">&nbsp; (<a href="msym/xu_siga12_msym_suppl_mat.pdf">Supplemental material, 4.6MB</a>)</span></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;" /></font><br />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 7px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 7px; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><br />
+Slides</small></font></td>
+            <td style="vertical-align: top; width: 753px;">
+            <table style="text-align: left; width: 427px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; width: 0px;">
+                  <div id="main2"><a href="http://www.kevinkaixu.net/k/slides/civil.ppt" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <a href="http://www.kevinkaixu.net/k/slides/civil.ppt" target="_blank"> </a></td>
+                  <td style="vertical-align: top; width: 354px;"><br />
+                  <br />
+                  <br />
+                  <br />
+                  <a href="https://dl.dropboxusercontent.com/u/100573487/ppt/xu_siga12_msym.pptx"><font style="color: rgb(253, 198, 5);" size="3"><span style="font-weight: bold;">PPTX, 16MB</span></font></a><br />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 9px; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
+            <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 750px; height: 168px;" alt="Algorithm Overview" title="Algorithm Overview" src="msym/overview.jpg" /></div>
+            <div style="text-align: center;"><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+2:</span> Outline of our multi-scale symmetry detection algorithm.
+After a voting step which identifies a set of (sufficiently) symmetric
+sample point pairs (a), we perform clustering of these point pairs
+based on a scale-aware affinity matrix (the SSM) to determine scale
+clusters. In each scale cluster, we perform the second-level clustering
+of sample points to detect symmetries at that scale (c-d).</big><big style="color: rgb(51, 204, 255);"><span style="font-weight: bold;" /></big>
+            </div>
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 600px; height: 257px;" alt="2D Results" title="2D Results" src="msym/2d_results.jpg" /></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+3:</span> Symmetry detection on 2D shapes sorted by scale. Observe the
+inter- and intra-object symmetries detected at multiple scales, even
+down to the small scales of the limbs in (d).</big><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 750px; height: 198px;" alt="Gallery" title="Gallery" src="msym/gallery.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 703px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+4: </span>A gallery of 3D symmetry detection results sorted by scale.
+From left to right and top-down: Children, Octopus, Kung Fu Panda,
+IndoLady, and Thai Statue. The last two models show raw clustering
+results. The IndoLady and Thai Statue models were chosen to demonstrate
+the performance of our algorithm on models which are not compositions
+of articulated characters. For the children model, not all arms or legs
+are detected in the last shown scale due to scale discrepancies and
+some parts fused with the body. For the IndoLady, our method does not
+return all perceived symmetries, e.g., the self-symmetries of the
+individual limbs. To save space, the first image for the Kung Fu Panda
+contains the first five scales, each revealing a self-symmetry of the
+four characters and the base.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 550px; height: 173px;" alt="Compare_1" title="Compare_1" src="msym/comp1.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+5:</span>
+Comparison between our multi-scale results (a) to the symmetry
+detection results of [Lipman et al. 2010] (b) and [Xu et al.
+2009] (c), which both provide only a single coverage of the shape. Our
+method detects overlapping symmetries and these results combine those
+from the other two methods.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            <br />
+            </font>
+            <div style="text-align: center;"><img style="width: 550px; height: 320px;" alt="Compare_2" title="Compare_2" src="msym/comp2.jpg" /><br />
+            </div>
+            <br />
+            <div style="text-align: justify; margin-left: 10px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+6:</span> Plots of the top two eigenvectors of Global Point Signature
+(a-b), Heat Kernel Signature (c-d), and our partial intrinsic SCM in
+two scales (e-h). The partial intrinsic symmetries are more clearly
+revealed in (e-h).</big></div>
+            <br />
+            <br />
+            <br />
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 550px; height: 421px;" alt="Compare_hiseg" title="Compare_hiseg" src="msym/comp_hiseg.jpg" /><br />
+            </div>
+            <br />
+            <div style="text-align: justify; margin-left: 10px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+7:</span> Comparison between our symmetry-driven hierarchical
+segmentation scheme (top row) and hierarchical segmentation based on
+primitive fitting [Attene et al. 2006] (middle row) and normalized cut
+[Golovinskiy and Funkhouser 2008] (bottom row). Each column shows the
+same segmentation count. It is evident that our results conform better
+to the shape semantics.</big></div>
+            <br />
+            <br />
+            <br />
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 550px; height: 264px;" alt="Failure_case" title="Failure_case" src="msym/failure_2d.jpg" /><br />
+            </div>
+            <br />
+            <div style="text-align: justify; margin-left: 10px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
+8:</span> Limitation to the use of intrinsic distances (a 2D case).
+Having one foot of the right figure planted into the base (a) or
+disconnected from the base (b) has a drastic effect on the multi-scale
+symmetries detected, since the distances changed drastically.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We
+would first like to thank the
+anonymous reviewers for their valuable feedback. Thanks also go to
+Daniel Cohen-Or for fruitful discussions on the paper. Part of the 3D
+models in this paper is from the shape repositories of AIM@SHAPE and
+Stanford. This work is
+supported in part by grants from NSFC (61202333, 61232011, 61161160567,
+61025012, 61103084, and 61070071), NSERC (No. 611370), National 863
+Program (2011AA010503), Shenzhen Science and Innovation Program
+(CXB201104220029A, JC201005270329A), the 973 National Basic Research
+Program of China (2011CB302400).</big></div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="data">Data</a></small><a name="data" /></font><a name="data" /></small></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We provide the datasets (including
+both 2D and 3D shapes) used in this paper:<br />
+            <br /><a target="_blank" href="https://dl.dropboxusercontent.com/u/100573487/msym_data/msysm_data.zip"><big style="font-weight: bold;"><span style="font-family: Helvetica,Arial,sans-serif;">Dataset (zip, 53MB)</span></big></a><br />
+            <br />
+            </big></div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
+{xu_siga12,<br />
+&nbsp;&nbsp;&nbsp; title = {Multi-Scale Partial Intrinsic Symmetry
+Detection},<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">author
+= {Kai Xu and Hao Zhang and Wei Jiang and Ramsay Dyer and Zhiquan Cheng
+and Ligang Liu and Baoquan Chen}<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">journal
+= {ACM Transactions on Graphics, (Proc. of SIGGRAPH Asia 2012)},<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">volume
+= {31},<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">number
+= {6},<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">pages
+= {181:1-181-11},<br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">&nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2012}<br />
+}</font></font></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.nudt.edu.cn/"><img style="width: 70px; height: 109px;" alt="NUDT" title="NUDT" src="../icons/NUDT_logo.png" /></a>
+<a target="_blank" href="http://english.siat.cas.cn/"> <img src="../icons/SIAT_logo.png" title="SIAT" alt="SIAT" style="width: 70px; height: 109px;" /></a> <a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SFU_logo.png" /></a>
+<a target="_blank" href="http://www-sop.inria.fr/geometrica"><img style="width: 70px; height: 109px;" alt="INRIA" title="INRIA" src="../icons/INRIA_logo.png" /></a>
+<a target="_blank" href="http://en.ustc.edu.cn/"><img style="width: 70px; height: 109px;" alt="USTC" title="USTC" src="../icons/USTC_logo.png" /></a> <a target="_blank" href="http://en.ustc.edu.cn/"> </a></div>
+      <br />
+      <br />
+      <ul>
+      </ul>
+      <div style="text-align: center;"><a href="http://english.nudt.edu.cn/"> </a></div>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2013-04-22 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>

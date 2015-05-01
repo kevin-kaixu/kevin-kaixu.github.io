@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The Source Code of Facade Structure Analysis - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Useful Links</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<div style="text-align: center; color: rgb(255, 255, 204);"><font style="font-family: Tahoma;" size="+2"><br />
+<br />
+The Source Code of Facade Structure Analysis<br />
+</font></div>
+<br style="color: rgb(255, 255, 204);" />
+<br style="color: rgb(255, 255, 204);" />
+<div style="line-height: 180%;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;" /></font><font size="+2"><span style="font-family: Tahoma;">Overview</span></font><br />
+<font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+This page maintains the source code of our hierarchical structure
+analysis algorithm for 2D facade image. It takes as input the box
+pattern of the facade elements and outputs a hierarchical decomposition
+tree for the facade structure. The hierarchical representation can be
+seen as a generative model of the input facade structure. Applications
+of such a representation include structure-aware facade retrieval,
+editing, and retargeting. See also the <a href="../projects/symbr.html">project page</a>.</span><br />
+<br />
+</font>
+<div style="text-align: center;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><img style="width: 890px;" alt="symbr_cover" src="symbr/cover.png" /></font><br />
+</div>
+<font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;" /></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+<br />
+<br />
+</span></font><font size="+2"><span style="color: rgb(0, 0, 0); font-family: Arial,Verdana,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;" /></font><font size="+2"><span style="font-family: Tahoma;">Downloads</span></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Source code &amp;
+testing data (MS VC++ 9.0 project) (<a href="https://dl.dropboxusercontent.com/u/100573487/symbr_code/symbr_code.zip">symbr_code.zip,
+14.5MB</a>)</span></font></li>
+  <br />
+  <br />
+</ul>
+<font size="+2"><span style="font-family: Tahoma;">Components</span></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Given a box pattern,
+compute its Integral Symmetry (IS) which is a continuous measure of the
+degree of symmetry<br />
+for given a discrete box pattern.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Compute the optimal
+hierarchical decomposition tree for an input facade strcutre
+represented as box pattern using Genetic Algorithm (GA).<br />
+    </span></font></li>
+</ul>
+<br />
+<font size="+1"><span style="font-family: Tahoma;"><br />
+<font size="+2">Compilation</font> </span></font><font size="+1"><span style="font-family: Calibri;">(see also <a href="./fast/readme.txt">readme.txt</a>
+included in the
+package)</span></font><font size="+1"><span style="font-family: Tahoma;" /></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">The code is provided as
+a Visual Studio C++ 9.0 project.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">You may need to install
+QT (later than v4.0) to compile the project.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">We utilize <a href="lancet.mit.edu/ga/" target="_blank">Matthew's Genetic Algorithms
+Library (GALib)</a> for the implementation of GA.</span></font></li>
+</ul>
+<font size="+1"><span style="font-family: Tahoma;"><br />
+<br />
+<font size="+2">Usage</font> </span></font><font size="+1"><span style="font-family: Calibri;">(see also <a href="./fast/readme.txt">readme.txt</a>
+included in the
+package)</span></font><font size="+1"><span style="font-family: Tahoma;"><br />
+</span></font>
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Unzip the package, you
+will see a VC9.0 solution file and four folders. <span style="color: rgb(153, 255, 255);">/AsymAnalysis</span> contains the
+source code. /bin is where the binary is output. <span style="color: rgb(153, 255, 255);">/input</span> is where the test
+data located. <span style="color: rgb(153, 255, 255);">/output</span>
+is where the results are output.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Put the input box
+pattern file under <span style="color: rgb(153, 255, 255);">/input/tag</span>.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">To run the program, open
+cmd.exe, cd to <span style="color: rgb(153, 255, 255);">/bin/release</span>,
+then type: AsymAnalysis &lt;input.txt&gt;</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">After the running is
+done, you can check out the output: a data file of the hierarchy under <span style="color: rgb(153, 255, 255);">/output/hist</span> and a
+visualized hierarchy rendered as an SVG vetor graph under <span style="color: rgb(153, 255, 255);">/output/svg</span>.</span></font></li>
+  <br />
+  <br />
+</ul>
+<font size="+2"><span style="font-family: Tahoma;">Notes</span></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">For the test data, the
+box petterns of facade elements are obtained using our Interactive Box
+Abstraction program (see paper for details). It is an independent
+program which has not been integrated into the analysis program yet.
+You can either choose to code up your own or ask for our program via
+email.</span></font></li>
+</ul>
+<br />
+<font size="+1"><span style="font-family: Tahoma;" /></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font><font size="+1"><span style="font-family: Tahoma;"><font size="+2">Citation &amp; Feedback</font></span></font><span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font size="+1"><span style="font-family: Tahoma;"><br />
+</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font></span><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">If you use any part of this source code,
+please cite the following paper:</span></font><span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;" /></font><br />
+</span>
+<ul style="font-family: Calibri;">
+  <li><font size="+1">Hao Zhang, Kai Xu, Wei Jiang, Jinjie Lin, Daniel
+Cohen-Or and Baoquan Chen. Layered Analysis of Irregular Facades via
+Symmetry Maximization. ACM Transactions on Graphics (SIGGRAPH 2013),
+32(4), 104:1-10.</font></li>
+</ul>
+<span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><span style="font-family: Calibri;"> </span></span></font></span><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">For more technical questions/feedbacks
+regarding the </span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">algorithm</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">/code, please send email to Kevin Xu (kevin
+[DOT] kai [DOT] xu [AT] gmail.com)</span></font><br />
+<span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">
+</span></font><font size="+1"><span style="font-family: Tahoma;" /></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font><font size="+1"><span style="font-family: Tahoma;" /></font></span></div>
+<br />
+<br />
+<ul>
+</ul>
+<div style="text-align: center;"><a href="http://english.nudt.edu.cn/">
+</a></div>
+<ul style="text-align: center;">
+  <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+</ul>
+<font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">
+</font> <b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2012-06-08 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
