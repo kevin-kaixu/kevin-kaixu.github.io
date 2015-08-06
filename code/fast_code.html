@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The Source Code of Curve Orientation - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Useful Links</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<div style="text-align: center; color: rgb(255, 255, 204);"><font style="font-family: Tahoma;" size="+2"><br />
+<br />
+The Source Code of Curve Orientation<br />
+</font></div>
+<br style="color: rgb(255, 255, 204);" />
+<br style="color: rgb(255, 255, 204);" />
+<div style="line-height: 180%;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;" /></font><font size="+2"><span style="font-family: Tahoma;">Overview</span></font><br />
+<font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+This page maintains the source code of Curve Orientation, the core part
+of our Feature-Aligned Shape Texturing paper.</span><br />
+<br />
+</font>
+<div style="text-align: center;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><img style="width: 870px; height: 170px;" alt="fast_cover" src="fast/cover.jpg" /></font><br />
+</div>
+<font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><br />
+<span style="font-family: Cambria;">Curve orientation problem
+statement: Given a set
+of curves on a 3D surface, each represented as a sequence of vertices
+connected by edges, we wish to assign an orientation to the tangent
+vector at each vertex, so that a vector field that interpolates these
+oriented tangents is as smooth as possible. Please refer the details of
+our algorithm to the paper.<br />
+</span></font><font size="+1"><span style="font-family: Tahoma;" /></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+<br />
+<br />
+</span></font><font size="+2"><span style="color: rgb(0, 0, 0); font-family: Arial,Verdana,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;" /></font><font size="+2"><span style="font-family: Tahoma;">Downloads</span></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Source Code (MeshStudio
+MSVC++ 2005 project) (<a href="./fast/fast_code.zip">fast_code.zip, 5KB</a>)</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">CHOLMOD includes and
+libs compiled on Windows XP (<a href="./fast/cholmod.zip">cholmod.zip, 10KB</a>)</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">A wrapper of CHOLMOD
+matrix and vector (<a href="./fast/cholmod_wrapper.zip">cholmod_wrapper.zip, 4KB</a>)</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Testing Data including
+(<a href="./fast/data.zip">data.zip, 3.0MB</a>): Mesh model (fandisk.obj); Crest lines output by Shin
+Yoshizawa's crest line extraction program (ravines_fandisk.txt and
+ridges_fandisk.txt); Processed crest lines with both random
+(fandisk_rand.ccl) and optimized orientation (fandisk_opt.ccl); Vector
+field (fandisk_opt.shvf) generated with the optimized orientation.<br />
+    </span></font></li>
+</ul>
+<font size="+1"><span style="font-family: Tahoma;"><br />
+<br />
+<font size="+2">Compilation</font> </span></font><font size="+1"><span style="font-family: Calibri;">(see also <a href="./fast/readme.txt">readme.txt</a> included in the
+package)</span></font><font size="+1"><span style="font-family: Tahoma;" /></font><br />
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">To compile the MSVC++
+project, you need to first install CGAL (e.g., version 3.3). In the
+following, I use $(CGALROOT) to refer to the root directory of CGAL.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">The computation of
+harmonic vector field uses CHOLMOD, so you also need to include and
+link the CHOLMOD stuff. All you need is to copy the the headers in
+"cholmod.zip(\include)" into "$(CGALROOT)\auxiliary\cholmod\include\"
+and the libs in "cholmod.zip(\lib)" into
+"$(CGALROOT)\auxiliary\cholmod\lib\". The including and linking setting
+has been set up within the VS project.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">I wrote a wrapper class
+for CHOLMOD matrix and vector (but not including the solver APIs) which
+you can find in "cholmod_wrapper.zip". Copy the two *.h files into
+"$(CGALROOT)\include\CGAL\".</span></font></li>
+</ul>
+<font size="+1"><span style="font-family: Tahoma;"><br />
+<br />
+<font size="+2">Usage</font> </span></font><font size="+1"><span style="font-family: Calibri;">(see also <a href="./fast/readme.txt">readme.txt</a> included in the
+package)</span></font><font size="+1"><span style="font-family: Tahoma;"><br />
+</span></font>
+<ul>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">I wrote a wrapper class
+for CHOLMOD matrix and vector (but not including the solver APIs) which
+you can find in<br />
+"cholmod_wrapper.zip". Copy the two *.h files into
+"$(CGALROOT)\include\CGAL\".</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Run: You can perform
+orientation at any time, no matter which type of data you have loaded.
+The corresponding vector field will also be computed.</span></font></li>
+  <li><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Output: You can save the
+resulted vector field into file (*.shvf).<br />
+    </span></font></li>
+</ul>
+<font size="+1"><span style="font-family: Tahoma;"><br />
+<br />
+<font size="+2">Acknowledgement</font><br />
+</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+We thank the providers of the following libraries/source
+codes: 1) <a href="http://www.cgal.org/" target="_blank">CGAL</a>; 2) <a href="http://www.cise.ufl.edu/research/sparse/cholmod/" target="_blank">CHOLMOD</a>; 3) <a href="http://www.riken.jp/brict/Yoshizawa/Research/Crest.html" target="_blank">Shin Yoshizawa's crest line extraction
+program</a>.<br />
+<br />
+<br />
+<br />
+</span></font><font size="+1"><span style="font-family: Tahoma;"><font size="+2">Citation &amp; Feedback</font></span></font><span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font size="+1"><span style="font-family: Tahoma;"><br />
+</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br /></span></font></span><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Please cite the following papers if you use the source code:</span></font><span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;" /></font><br />
+</span>
+<ul style="font-family: Calibri;">
+  <li><font size="+1">Kai Xu, Daniel Cohen-Or, Tao Ju, Ligang Liu, Hao
+Zhang, Shizhe Zhou, and Yueshan Xiong, "Feature-Aligned Shape
+Texturing," ACM Transactions on Graphics (SIGGRAPH Aisa 2009), 28(5).</font></li>
+  <li><font size="+1">Kai Xu, Hao Zhang, Daniel Cohen-Or, and Yueshan
+Xiong, "Dynamic Harmonic Fields for Surface Processing," Computers and
+Graphics (Special Issue of Shape Modeling International 2009), Vol. 33,
+pp. 391-398.</font></li>
+</ul>
+<span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><span style="font-family: Calibri;"> </span></span></font></span><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">Welcome to send any feed back to kevin.kai.xu [at] gmail.com.</span></font><br />
+<span style="color: rgb(0, 0, 0); font-family: arial,sans-serif; font-size: large; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;">
+</span></font><font size="+1"><span style="font-family: Tahoma;" /></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font><font style="font-family: Cambria; color: rgb(255, 255, 204);" size="+1"><span style="font-family: Cambria;"><br />
+</span></font><font size="+1"><span style="font-family: Tahoma;" /></font></span></div>
+<br />
+<br />
+<ul>
+</ul>
+<div style="text-align: center;"><a href="http://english.nudt.edu.cn/">
+</a></div>
+<ul style="text-align: center;">
+  <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+</ul>
+<font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">
+</font> <b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2012-06-08 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
