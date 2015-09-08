@@ -99,8 +99,30 @@ shown with distinct colors. Right: Zoomed-in views.</big></div>
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">Detailed scanning of indoor scenes is tedious for human. We propose autonomous scene scanning operated by a robot to relieve humans from such laborious task. In an autonomous setting, detailed scene acquisition is inevitably coupled with scene analysis at the required level of detail. We develop a framework for object-level scene reconstruction coupled with object-centric scene analysis. As such, the autoscanning and reconstruction will be object-aware, guided by the object analysis. The analysis is, in turn, gradually improved with progressively increased object-wise data fidelity. In realizing such a framework, we drive the robot to execute an iterative analyze-and-validate algorithm which interleaves between object analysis and guided validations.
-<br /><br />The object analysis incorporates online learning into a robust graph-cut based segmentation framework, achieving global update of object-level segmentation based on the knowledge gained from robot-operated local validation. Based on the current analysis, the robot performs proactive validation over the scene with physical push and scan refinement, aiming at reducing the uncertainty of both object-level segmentation and object-wise reconstruction. We propose a joint entropy to measure such uncertainty based on segmentation confidence and reconstruction quality, and formulate the selection of validation actions as a maximum information gain problem. The output of our system is a reconstructed scene with both object extraction and object-wise geometry fidelity.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">Detailed scanning of indoor scenes is tedious for humans. We pro-
+pose autonomous scene scanning operated by a robot to relieve hu-
+mans from such a laborious task. In an autonomous setting, detailed
+scene acquisition is inevitably coupled with scene analysis at the
+required level of detail. We develop a framework for object-level
+scene reconstruction coupled with object-centric scene analysis. As
+a result, the autoscanning and reconstruction will be object-aware,
+guided by the object analysis. The analysis is, in turn, gradually
+improved with progressively increased object-wise data fidelity. In
+realizing such a framework, we drive the robot to execute an it-
+erative analyze-and-validate algorithm which interleaves between
+object analysis and guided validations.
+<br /><br />Theobjectanalysisincorporatesonlinelearningintoarobustgraph-
+cut based segmentation framework, achieving a global update of
+object-level segmentation based on the knowledge gained from
+robot-operated local validation. Based on the current analysis,
+the robot performs proactive validation over the scene with phys-
+ical push and scan refinement, aiming at reducing the uncertainty
+of both object-level segmentation and object-wise reconstruction.
+We propose a joint entropy to measure such uncertainty based on
+segmentation confidence and reconstruction quality, and formulate
+the selection of validation actions as a maximum information gain
+problem. The output of our system is a reconstructed scene with
+both object extraction and object-wise geometry fidelity.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -120,7 +142,7 @@ shown with distinct colors. Right: Zoomed-in views.</big></div>
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href=""><img style="border: 0px solid ; width: 140px" alt="Paper PDF" title="Paper PDF" src="pr2scene/paper.jpg" /></a></div>
+                  <div id="main2"><a href="../papers/xu_siga15_pr2scene.pdf"><img style="border: 0px solid ; width: 140px" alt="Paper PDF" title="Paper PDF" src="pr2scene/paper.jpg" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -135,9 +157,9 @@ shown with distinct colors. Right: Zoomed-in views.</big></div>
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong>PDF, ??MB</strong></font><font style="color: rgb(255, 255, 214);" size="3"><span style="font-weight: bold;">&nbsp; (Supplemental
-                          material,
-                          ??MB)</span></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                        <strong><a href="../papers/xu_siga15_pr2scene.pdf">PDF, 18.7MB</a></strong></font><font style="color: rgb(255, 255, 214);" size="3"><span style="font-weight: bold;">&nbsp; (<a href="../data/pr2scene/suppl_mat_mkl.pdf">Supplemental
+                          material
+                          PDF, 219KB</a>)</span></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
                     </p>
                   </td>
                 </tr>
@@ -260,12 +282,15 @@ wares are extracted by segmentation without physical validation.</big></div>
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank all the reviewers for their valuable comments and
- suggestions. We are especially grateful to Hao Zhang and
-Daniel Cohen-Or for  their help and the fruitful discussions. This work was supported in part by NSFC (61202333, 61272327 and 61232011), National 973 Program of China (2015CB352500 and 2015CB352501), Guangdong Sci. and Tech. Program
-(2014B050502009, 2014TX01X033), Shenzhen VisuCA Key Lab
-(CXB201104220029A), SIAT Innovation Program for Excellent Young
-Researchers (201402).</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank all the reviewers for their valuable comments and constructive
+suggestions. We are especially grateful to Hao Zhang and
+Daniel Cohen-Or for their help and discussion. We would also like
+to acknowledge our research grants: NSFC (61232011, 61572507,
+61202333, 61272327), National 973 Program (2015CB352500,
+2015CB352501), Guangdong Science and Technology Program
+(2015A030312015, 2014B050502009, 2014TX01X033), Shenzhen
+VisuCA Key Lab (CXB201104220029A), and SIAT Innovation
+Program for Excellent Young Researchers (201402).</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
