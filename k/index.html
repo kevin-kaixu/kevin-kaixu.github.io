@@ -1,0 +1,61 @@
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<title>Redirecting ...</title>
+
+</head>
+
+<body>
+
+<form name=loading> 
+
+　<p align=center> <font color="#0066ff" size="2">You are being directed to kevinkaixu.net </font><font color="#0066ff" size="2" face="Arial">...</font>
+
+　　<input type=text name=chart size=46 style="font-family:Arial; font-weight:bolder; color:#0066ff; background-color:#fef4d9; padding:0px; border-style:none;"> 
+
+　　
+
+　　<input type=text name=percent size=47 style="color:#0066ff; text-align:center; border-width:medium; border-style:none;"> 
+
+　　<script>　 
+
+var bar=0　 
+
+var line="||"　 
+
+var amount="||"　 
+
+count()　 
+
+function count(){　 
+
+bar=bar+1　 
+
+amount =amount + line　 
+
+document.loading.chart.value=amount　 
+
+document.loading.percent.value=bar+"%"　 
+
+if (bar<99)　 
+
+{setTimeout("count()",10);}　 
+
+else　 
+
+{window.location = "http://kevinkaixu.net/";}　 
+
+}</script> 
+
+　</p> 
+
+</form> 
+
+<p align="center"> If your browser does not support auto redirecting,<a style="text-decoration: none" href="http://kevinkaixu.net/"><font color="#FF0000"> please click here.</font></a>.</p>
+
+</body>
+
+</html>
