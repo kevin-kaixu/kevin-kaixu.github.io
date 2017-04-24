@@ -54,38 +54,34 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="width: 200px;" alt="sa16_logo" src="nbv/sa2016_logo.jpg" /> </div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 240px;" alt="sa16_logo" src="grass/s2017_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
       <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-      <span style="font-family: Arial;">3D Attention-Driven Depth Acquisition for Object Identification<br />
+      <span style="font-family: Arial;">GRASS: Generative Recursive Autoencoders for Shape Structures<br />
       </span></span></font> </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu<small><sup>1,2,3</sup></small>,&nbsp;
-            </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Yifei Shi<small><sup>1</sup></small>,&nbsp; Lintao Zheng</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>1</sup></small>,&nbsp; Junyu Zhang<sup>2</sup>, &nbsp;Min Liu<small><sup>1</sup></small>,&nbsp; Hui Huang<small><sup>3</sup></small>,</span></font></p>
-        <p><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Hao Su<small><sup>4</sup>,&nbsp;Daniel Cohen-Or<sup>5</sup></small>, Baoquan Chen<small><sup>2</sup></small><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Jun Li<small><sup>1</sup></small>,&nbsp; Kai Xu<small><sup>1,2,3</sup></small>,&nbsp;
+            Siddhartha Chaudhuri<small><sup>4</sup></small>,&nbsp;Ersin Yumer<sup>5</sup>, &nbsp;Hao Zhang<small><sup>6</sup></small>,&nbsp;Leonidas Guibas<small><sup>7</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
           <br />
           <br />
-          </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>National University of Defense Technology, &nbsp;&nbsp; <sup>2</sup>Shandong University,&nbsp;&nbsp;&nbsp;
-            <sup>3</sup>Shenzhen University&nbsp;&nbsp;&nbsp; <sup>4</sup>Stanford University&nbsp;&nbsp;&nbsp; <sup>5</sup>Tel-Aviv University<br />
-            <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>National University of Defense Technology, &nbsp; <sup>2</sup>Shenzhen University,&nbsp;&nbsp;
+            <sup>3</sup>Shandong University,&nbsp;&nbsp; <sup>4</sup>IIT Bombay,&nbsp;&nbsp; <sup>5</sup>Adobe Research,&nbsp;&nbsp; <sup>6</sup>Simon Fraser University,&nbsp;&nbsp; <sup>7</sup>Stanford University<br />
+          <br />
             </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
-              </font><big style="color: rgb(255, 255, 214);">ACM Transactions
-                on Graphics (SIGGRAPH Asia 2016), 35(6)</big><br />
-          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            </font><big style="color: rgb(255, 255, 214);">ACM Transactions
+              on Graphics (SIGGRAPH 2017), 36(4)</big><br />
+              <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
             <br />
-            </span></font><br />
+              </span></font><br />
         </p>
       </div>
-      <div style="text-align: center;"><img style="width: 900px;" alt="overlapping" src="nbv/teaser.jpg" /></div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="overlapping" src="grass/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure 1:</span> We present an autonomous system for active object identification in an indoor scene (a), with consecutive depth acquisitions, for
-online scene modeling. The scene is first roughly scanned, and segmented to generate 3D object proposals. Targeting an object proposal (b),
-the robot performs multi-view object identification, based on a 3D shape database, driven by a 3D Attention Model. The retrieved 3D models
-are inserted into the scanned scene (c), replacing the corresponding object scans, thus incrementally constructing a 3D scene model (d).</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We develop GRASS, a Generative Recursive Autoencoder of Shape Structures, which enables structural blending between two 3D shapes. Note the discrete blending of translational symmetries (slats on the chair backs) and rotational symmetries (the swivel legs). GRASS encodes and synthesizes box structures (boom) and part geometries (top) separately. The blending is performed on fixed-length codes learned by the unsupervised autoencoder, without any form of part correspondences, given or computed.</big></div>
       <br />
       <br />
       <br />
@@ -98,23 +94,24 @@ are inserted into the scanned scene (c), replacing the corresponding object scan
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">We address the problem of autonomous exploring unknown objects
-in a scene by consecutive depth acquisitions. The goal is to model the scene via identifying the objects online, from among a large collection of 3D shapes. Fine-grained shape identification demands
-a meticulous series of observations attending to varying views and
-parts of the object of interest. Inspired by the recent success of
-attention-based models for 2D recognition, we develop a 3D Attention
-Model that selects the best views to scan from, as well as the
-most informative regions in each view to focus on, to achieve efficient
-object recognition. The region-level attention leads to focus-driven
-features which are quite robust against object occlusion. The
-attention model, trained with the 3D shape collection, encodes the
-temporal dependencies among consecutive views with deep recurrent
-networks. This facilitates order-aware view planning accounting
-for robot movement cost. In achieving instance identification,
-the shape collection is organized into a hierarchy, associated with
-pre-trained hierarchical classifiers. The effectiveness of our method
-is demonstrated on an autonomous robot (PR) that explores a scene
-and identifies the objects for scene modeling.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">We introduce a novel neural network architecture for encoding and synthesis
+of 3D shapes, particularly their structures. Our key insight is that
+3D shapes are eectively characterized by their hierarchical organization
+of parts, which reects fundamental intra-shape relationships such as adjacency
+and symmetry. We develop a recursive neural net (RvNN) based
+autoencoder to map a at, unlabeled, arbitrary part layout to a compact code.
+The code eectively captures the hierarchical structures of varying complexity
+despite being xed-dimensional: an associated decoder maps a code
+back to a full hierarchy. The learned bidirectional mapping is further tuned
+using an adversarial setup to yield a generative model of plausible structures,
+from which novel structures can be sampled. Finally, our structure synthesis
+framework is augmented by a second trained module that produces negrained
+part geometry, conditioned on global and local structural context,
+leading to a full generative pipeline for 3D shapes. We demonstrate that
+without supervision, our network learns meaningful structural hierarchies
+adhering to perceptual grouping principles, produces compact codes which enable applications such as shape classication and partial matching, and
+supports shape synthesis and interpolation with signicant variations in
+topology and geometry.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -133,7 +130,7 @@ and identifies the objects for scene modeling.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="../papers/xu_siga15_pr2scene.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="nbv/paper.jpg" /></a></div>
+                  <div id="main2"><a href="../papers/xu_siga15_pr2scene.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="grass/paper.jpg" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -148,7 +145,7 @@ and identifies the objects for scene modeling.</big><br />
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="../papers/xu_siga16_nbv.pdf">PDF, 12.5MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                        <strong><a href="../papers/xu_sig17_grass.pdf">PDF, 12.5MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
                     </p>
                   </td>
                 </tr>
@@ -187,65 +184,37 @@ Slides</small></font></td>
             </td>
             <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
           </tr>
-          <tr>
-            <td style="vertical-align: top; text-align: right; height: 29px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
-            <small>Video</small></font></td>
-            <td style="vertical-align: top; height: 29px; width: 753px;">
-            <table style="text-align: left; height: 104px; width: 764px;" border="0" cellpadding="2" cellspacing="2">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: top; width: 30px;">
-                  <div id="main2"><a href="../videos/pr2scene.mp4" target="_blank"><img style="width: 45px; height: 92px;" alt="Video" title="Conference Video" src="../icons/MOV.png" /></a></div>
-                  </td>
-                  <td style="vertical-align: top; width: 690px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
-                    </span></font><br />
-                    <br />
-                    <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../videos/nbv.mp4">MP4, ??MB</a></strong></font></p></td>
-                </tr>
-              </tbody>
-            </table></td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
-            </td>
-            <td style="vertical-align: top; height: 9px; width: 753px;"><p>&nbsp;</p></td>
-          </tr>
+          
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="nbv/overview.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="grass/overview.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-2:</span> Our core contribution is a recurrent 3D attention model (3D-RAM) (d). At each time step, it takes a depth image as input, updates
-its internal state, performs shape classification and estimates the next-best-view. To make instance-level classification feasible, we organize
-the shape collection with a classification hierarchy (b). At each node of the hierarchy, a multi-view 3D shape classifier (c) assigns the
-associated shapes into K overlapping groups (a). Online object identification is guided by 3D-RAM while traversing down the hierarchy for
-coarse-to-fine classification (e). The feature extractor and classifier of the corresponding node are employed by the 3D-RAM.</big><big style="color: rgb(51, 204, 255);"><span style="font-weight: bold;" /></big>
-            </div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">An overview of our pipeline, including the three key stages: (a) pre-training the RvNN autoencoder to obtain root codes for shapes, (b) using a GAN
+network to learn the actual shape manifold within the code space, and (c) using a second network to convert synthesized OBBs to detailed geometry.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="nbv/mvrnn.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="grass/gan.jpg" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-3:</span> Our recurrent 3D attention model (b) is a two-layer stacked recurrent neural network, with a MV-CNN (a) plugged in. The
-subnetworks of MV-RNN responsible for feature extraction, feature aggregation and classification are substituted by CNN1, view pooling and
-CNN2 of MV-CNN, respectively. The corresponding subnetworks are shaded in same color. (b) shows a two-time-step expansion of MV-RNN.
-Dashed arrows indicate information flow across time steps while solid ones represent that within a time step.</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Left:</span> Architecture of our generative adversarial network, showing reuse
+of autoencoder modules.</big> <big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Right:</span></big> <big style="color: rgb(255, 255, 214);">Confining random codes by sampling from a learned Gaussian
+distributions based on learned root codes. Jointly learning the distribution
+and training the GAN leads to a VAE-GAN network.</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="nbv/gallery.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="grass/gallery.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-4: </span>Visualization of identification process and attention (both on acquired depth images and identified shapes) for six real objects.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Linear interpolation between root codes, and subsequent synthesis, can result in plausible morphs between shapes with significantly different
+topologies.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
             
@@ -261,13 +230,12 @@ Dashed arrows indicate information flow across time steps while solid ones repre
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments
-and suggestions. This work was supported in part by
-NSFC(61572507, 61532003, 61522213, 61232011), 973 Program
-(2015CB352501, 2014CB360503), Guangdong Science
-and Technology Program (2015A030312015, 2014B050502009,
-2014TX01X033, 2016A050503036) and Shenzhen Innovation Program
-(JCYJ20151015151249564).</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments and
+suggestions. We are grateful to Yifei Shi, Min Liu and Yizhi Wang
+for their generous help on data preparation and result production.
+This work was supported in part by NSFC (61572507, 61532003,
+61622212), an NSERC grant (611370), NSF Grants IIS-1528025 and DMS-1546206, a Google Focused Research Award, and gifts from
+the Adobe, Qualcomm and Vicarious corporations.</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -278,11 +246,11 @@ and Technology Program (2015A030312015, 2014B050502009,
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code</a></small></font></small></td>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We have released the source code of our MV-RNN, which is built on top of <a href="http://torch.ch/" target="_blank">Torch</a>.<br />
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We will soon release the source code of training and testing, a trained model, as well as our dataset:<br />
             <br />
-            <big style="font-weight: bold;"><a href="https://github.com/kevin-kaixu/multi_view_ram">Github repository</a></big><br />
+            <big style="font-weight: bold;"><a href="https://github.com/junli-lj/grass">Github repository</a></big><br />
             <br />
             </big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
@@ -297,26 +265,26 @@ and Technology Program (2015A030312015, 2014B050502009,
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{xu_siga16,<br />
-&nbsp;&nbsp;&nbsp; title = {3D Attention-Driven Depth Acquisition for Object Identification},<br />
+{li_sig17,<br />
+&nbsp;&nbsp;&nbsp; title = {GRASS: Generative Recursive Autoencoders for Shape Structures},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {</font>Kai Xu and Yifei Shi and Lintao Zheng and Junyu Zhang and Min Liu and Hui Huang and Hao Su and Daniel Cohen-Or and Baoquan Chen},<br />
+= {Jun Li and </font>Kai Xu and Siddhartha Chaudhuri and Ersin Yumer and Hao Zhang and Leonidas Guibas},<br />
             &nbsp;&nbsp;&nbsp;
             journal
-= {ACM Transactions on Graphics (Proc. of SIGGRAPH Asia 2016)},<br />
+= {ACM Transactions on Graphics (Proc. of SIGGRAPH 2017)},<br />
             &nbsp;&nbsp;&nbsp;
             volume
-= {35},<br />
+= {36},<br />
             &nbsp;&nbsp;&nbsp;
             number
-= {6},<br />
+= {4},<br />
             &nbsp;&nbsp;&nbsp;
             pages
-= {Article No. 238},<br />
+= {to appear},<br />
             &nbsp;&nbsp;&nbsp;
             </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
-= {2016}<br />
+= {2017}<br />
 }</font></font></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
           </tr>
@@ -326,7 +294,7 @@ and Technology Program (2015A030312015, 2014B050502009,
       <br />
       <br />
       <br />
-      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a><a target="_blank" href="http://english.nudt.edu.cn"><img src="../icons/SZU_logo.png" title="SZU" alt="SIAT" style="width: 70px; height: 109px;" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SDU_logo.png" /></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="Stanford" title="SFU" src="../icons/Stanford_logo.png" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="TAU" title="TAU" src="../icons/TAU_logo.png" /></a></div>
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a><a target="_blank" href="http://english.nudt.edu.cn"><img src="../icons/SZU_logo.png" title="SZU" alt="SIAT" style="width: 70px; height: 109px;" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SDU_logo.png" /></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a><a target="_blank" href="http://www.iitb.ac.in/"><img style="width: 70px; height: 109px;" alt="IIT Bombay" title="IIT" src="../icons/IITB_logo.png" /></a><a target="_blank" href="https://research.adobe.com/"><img style="width: 70px; height: 109px;" alt="Adobe Research" title="Adobe" src="../icons/Adobe_logo.png" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SFU_logo.png" /></a><a target="_blank" href="http://stanford.edu/"><img style="width: 70px; height: 109px;" alt="Stanford" title="Stanford" src="../icons/Stanford_logo.png" /></a></div>
       <br />
       <br />
       <ul>
