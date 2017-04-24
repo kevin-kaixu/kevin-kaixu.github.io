@@ -5,7 +5,7 @@
 
 
   
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>GRASS - Kevin (Kai) Xu's Homepage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Deformation-Driven Shape Correspondence - Kevin (Kai) Xu's Homepage</title>
   
 
   
@@ -54,22 +54,21 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 240px;" alt="sa16_logo" src="grass/s2017_logo.png" /></div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 240px;" alt="s17_logo" src="scsc/s2017_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
       <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-      <span style="font-family: Arial;">GRASS: Generative Recursive Autoencoders for Shape Structures<br />
+      <span style="font-family: Arial;">Deformation-Driven Shape Correspondence via Shape Recognition<br />
       </span></span></font> </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Jun Li<small><sup>1</sup></small>,&nbsp; Kai Xu<small><sup>1,2,3</sup></small>,&nbsp;
-            Siddhartha Chaudhuri<small><sup>4</sup></small>,&nbsp;Ersin Yumer<sup>5</sup>, &nbsp;Hao Zhang<small><sup>6</sup></small>,&nbsp;Leonidas Guibas<small><sup>7</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Chenyang Zhu<small><sup>1,2</sup></small>,&nbsp; Renjiao Yi<small><sup>1,2</sup></small>,&nbsp;
+            Wallace Lira<small><sup>1</sup></small>,&nbsp;Ibraheem Alhashim<sup>1</sup>, &nbsp;Kai Xu<small><sup>2</sup></small>,&nbsp;Hao Zhang<small><sup>1</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
           <br />
           <br />
-            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>National University of Defense Technology, &nbsp; <sup>2</sup>Shenzhen University,&nbsp;&nbsp;
-            <sup>3</sup>Shandong University,&nbsp;&nbsp; <sup>4</sup>IIT Bombay,&nbsp;&nbsp; <sup>5</sup>Adobe Research,&nbsp;&nbsp; <sup>6</sup>Simon Fraser University,&nbsp;&nbsp; <sup>7</sup>Stanford University<br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Simon Fraser University, &nbsp; &nbsp; <sup>2</sup>National University of Defense Technology<br />
           <br />
             </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font><big style="color: rgb(255, 255, 214);">ACM Transactions
@@ -79,9 +78,11 @@ Homepage</a></div>
               </span></font><br />
         </p>
       </div>
-      <div style="text-align: center;"><img style="width: 900px;" alt="overlapping" src="grass/teaser.jpg" /></div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="overlapping" src="scsc/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We develop GRASS, a Generative Recursive Autoencoder of Shape Structures, which enables structural blending between two 3D shapes. Note the discrete blending of translational symmetries (slats on the chair backs) and rotational symmetries (the swivel legs). GRASS encodes and synthesizes box structures (boom) and part geometries (top) separately. The blending is performed on fixed-length codes learned by the unsupervised autoencoder, without any form of part correspondences, given or computed.</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">An overview of our deformation-driven correspondence algorithm. The input consists of two pre-segmented or over-segmented 3D shapes. We
+recursively split and match substructures according to a data-driven plausibility criterion that relies exclusively on shape recognition. The first iteration splits the input shapes into two sub-shapes. Given a pair of matched components, the algorithm recursively splits and matches them. Finally, aer
+termination conditions are met for each substructure, we obtain a final part correspondence.</big></div>
       <br />
       <br />
       <br />
@@ -94,24 +95,30 @@ Homepage</a></div>
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">We introduce a novel neural network architecture for encoding and synthesis
-of 3D shapes, particularly their structures. Our key insight is that
-3D shapes are eectively characterized by their hierarchical organization
-of parts, which reects fundamental intra-shape relationships such as adjacency
-and symmetry. We develop a recursive neural net (RvNN) based
-autoencoder to map a at, unlabeled, arbitrary part layout to a compact code.
-The code eectively captures the hierarchical structures of varying complexity
-despite being fixed-dimensional: an associated decoder maps a code
-back to a full hierarchy. The learned bidirectional mapping is further tuned
-using an adversarial setup to yield a generative model of plausible structures,
-from which novel structures can be sampled. Finally, our structure synthesis
-framework is augmented by a second trained module that produces fine-grained
-part geometry, conditioned on global and local structural context,
-leading to a full generative pipeline for 3D shapes. We demonstrate that
-without supervision, our network learns meaningful structural hierarchies
-adhering to perceptual grouping principles, produces compact codes which enable applications such as shape classiffication and partial matching, and
-supports shape synthesis and interpolation with signicant variations in
-topology and geometry.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">Many approaches to shape comparison and recognition start by establishing
+a shape correspondence. We “turn the table” and show that quality
+shape correspondences can be obtained by performing many shape recognition
+tasks. What is more, the method we develop computes a ne-grained,
+topology-varying part correspondence between two 3D shapes where the
+core evaluation mechanism only recognizes shapes globally. This is made
+possible by casting the part correspondence problem in a deformation-driven
+framework and relying on a data-driven “deformation energy” which rates
+visual similarity between deformed shapes and models from a shape repository.
+Our basic premise is that if a correspondence between two chairs (or
+airplanes, bicycles, etc.) is correct, then a reasonable deformation between
+the two chairs anchored on the correspondence ought to produce plausible,
+“chair-like” in-between shapes.</big></p>
+              <p><big style="color: rgb(255, 255, 214);">                Given two 3D shapes belonging to the same category, we perform a
+                top-down, hierarchical search for part correspondences. For a candidate
+                correspondence at each level of the search hierarchy, we deform one input
+                shape into the other, while respecting the correspondence, and rate the
+                correspondence based on how well the resulting deformed shapes resemble
+                other shapes from ShapeNet belonging to the same category as the inputs.
+                The resemblance, i.e., plausibility, is measured by comparing multi-view
+                depth images over category-specic features learned for the various shape
+                categories. We demonstrate clear improvements over state-of-the-art approaches
+                through tests covering extensive sets of man-made models with
+                rich geometric and topological variations.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -130,7 +137,7 @@ topology and geometry.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="../papers/li_sig17_grass.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="grass/paper.jpg" /></a></div>
+                  <div id="main2"><a href="../papers/zhu_sig17_scsc.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="grass/paper.jpg" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -145,7 +152,7 @@ topology and geometry.</big><br />
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="../papers/li_sig17_grass.pdf">PDF, ??.?MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                        <strong><a href="../papers/zhu_sig17_scsc.pdf">PDF, ??.?MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
                     </p>
                   </td>
                 </tr>
@@ -167,12 +174,12 @@ Slides</small></font></td>
               <tbody>
                 <tr>
                   <td style="vertical-align: top; width: 0px;">
-                  <div id="main2"><a href="../slides/li_sig17_grass.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <div id="main2"><a href="../slides/zhu_sig17_scsc.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
                   </td>
                   <td style="vertical-align: top; width: 354px;"><br />
                   <br />
                   <br />
-                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/li_sig17_grass.pdf">PDF, ??MB</a><br /></strong></font>
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/zhu_sig17_scsc.pdf">PDF, ??MB</a><br /></strong></font>
                   </td>
                 </tr>
               </tbody>
@@ -188,33 +195,40 @@ Slides</small></font></td>
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="grass/overview.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="scsc/overview.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">An overview of our pipeline, including the three key stages: (a) pre-training the RvNN autoencoder to obtain root codes for shapes, (b) using a GAN
-network to learn the actual shape manifold within the code space, and (c) using a second network to convert synthesized OBBs to detailed geometry.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><strong>Left: </strong>Samples of our plausibility measure training data. "Missing negative" (left-middle)
+samples shows examples with patches that are not present in the shape,
+while "swap negative" (left-right) shows structures that have some undesirable combination
+of patches. Either negative case directly affects the visual perception
+of shape implausibility. <strong>Right:</strong> Extracting a feature vector from the HOG representation of the
+depth image and the mid-level patches. Feature vectors are constructed by
+generating a response map using a convolution operation between patches
+and depth maps. We obtain a 10-dimensional feature vector for each depth
+patch by averaging five segments of the response map in the vertical and
+horizontal directions. The feature vectors of all the patches of a given depth
+image are then combined into one single feature vector that represents the
+depth image.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="grass/gan.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="scsc/hier.jpg" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Left:</span> Architecture of our generative adversarial network, showing reuse
-of autoencoder modules.</big> <big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Right:</span></big> <big style="color: rgb(255, 255, 214);">Confining random codes by sampling from a learned Gaussian
-distributions based on learned root codes. Jointly learning the distribution
-and training the GAN leads to a VAE-GAN network.</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Some hierarchical correspondence of input shape segments obtained by our method.</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="grass/gallery.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="scsc/gallery.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Linear interpolation between root codes, and subsequent synthesis, can result in plausible morphs between shapes with significantly different
-topologies.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">A gallery of part correspondences computed by our algorithm (boom pair of each two shape pairs compared) with comparisons to GeoTopo [Alhashim
+et al. 2015]. Matched parts share the same color; unmatched parts are in gray.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
             
@@ -230,12 +244,11 @@ topologies.</big></div>
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments and
-suggestions. We are grateful to Yifei Shi, Min Liu and Yizhi Wang
-for their generous help on data preparation and result production.
-This work was supported in part by NSFC (61572507, 61532003,
-61622212), an NSERC grant (611370), NSF Grants IIS-1528025 and DMS-1546206, a Google Focused Research Award, and gifts from
-the Adobe, Qualcomm and Vicarious corporations.</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We would like to thank the reviewers for their valuable comments
+and feedback. We also thank Noa Fish and Oliver van Kaick for
+fruitful discussions. This work is supported in part by grants from
+NSERC Canada (611770), China Scholarship Council, and NSF China
+(61572507, 61532003, 61622212).</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -248,9 +261,9 @@ the Adobe, Qualcomm and Vicarious corporations.</big></div>
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We will soon release the source code of training and testing, a trained model, as well as our dataset:<br />
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We will soon release the source code and the dataset:<br />
             <br />
-            <big style="font-weight: bold;"><a href="https://github.com/junli-lj/grass">Github repository</a></big><br />
+            <big style="font-weight: bold;"><a href="https://github.com/">Github repository</a></big><br />
             <br />
             </big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
@@ -265,11 +278,11 @@ the Adobe, Qualcomm and Vicarious corporations.</big></div>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{li_sig17,<br />
-&nbsp;&nbsp;&nbsp; title = {GRASS: Generative Recursive Autoencoders for Shape Structures},<br />
+{zhu_sig17,<br />
+&nbsp;&nbsp;&nbsp; title = {Deformation-Driven Shape Correspondence via Shape Recognition},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {Jun Li and </font>Kai Xu and Siddhartha Chaudhuri and Ersin Yumer and Hao Zhang and Leonidas Guibas},<br />
+= {Chenyang Zhu and Renjiao Yi and Wallace Lira and Ibraheem Alhashim and Kai Xu and Hao Zhang},<br />
             &nbsp;&nbsp;&nbsp;
             journal
 = {ACM Transactions on Graphics (Proc. of SIGGRAPH 2017)},<br />
@@ -294,7 +307,7 @@ the Adobe, Qualcomm and Vicarious corporations.</big></div>
       <br />
       <br />
       <br />
-      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a><a target="_blank" href="http://english.nudt.edu.cn"><img src="../icons/SZU_logo.png" title="SZU" alt="SIAT" style="width: 70px; height: 109px;" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SDU_logo.png" /></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a><a target="_blank" href="http://www.iitb.ac.in/"><img style="width: 70px; height: 109px;" alt="IIT Bombay" title="IIT" src="../icons/IITB_logo.png" /></a><a target="_blank" href="https://research.adobe.com/"><img style="width: 70px; height: 109px;" alt="Adobe Research" title="Adobe" src="../icons/Adobe_logo.png" /></a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SFU_logo.png" /></a><a target="_blank" href="http://stanford.edu/"><img style="width: 70px; height: 109px;" alt="Stanford" title="Stanford" src="../icons/Stanford_logo.png" /></a></div>
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SFU_logo.png" /></a><a target="_blank" href="http://english.siat.cas.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a></div>
       <br />
       <br />
       <ul>
