@@ -60,7 +60,7 @@ Publications (See my pages on <a href="http://scholar.google.ca/citations?user=G
       <div style="text-align: justify; margin-left: 5px; line-height: 160%; background-color: rgb(0, 14, 24); width: 669px;"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><b>Kai
 Xu*</b></font>, Lintao Zheng*, Zihao Yan, Guohang Yan, <font style="color: rgb(255, 255, 214);" size="3"><a href="http://web.engr.oregonstate.edu/~zhange/" target="_blank">Eugene Zhang</a>, <a href="http://www.graphics.stanford.edu/~niessner/" target="_blank">Matthias Niessner</a>, <a href="https://www.cgmi.uni-konstanz.de/en/persons/prof-dr-oliver-deussen/" target="_blank">Oliver Deussen</a><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3">, <a href="http://www.cs.tau.ac.il/~dcor/" target="_blank">Daniel Cohen-Or</a></font></font> and <a href="http://vcc.szu.edu.cn/~huihuang/" target="_blank">Hui Huang</a>, "<b><span style="color: rgb(229, 229, 229);">Autonomous Reconstruction of Unknown Indoor Scenes Guided by Time-varying Tensor Fields 	,</span></b>"<font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><i> ACM Transactions on
 Graphics (SIGGRAPH Asia 2017)</i>, Conditionally accepted. (* indicates co-first authors). <font style="color: rgb(255, 255, 214);" size="3">[<font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><a href="papers/xu_siga17_tfnav.pdf">Paper, ??M</a><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> | <a href="slides/tfnav_siga17_talk.pdf">Slides, ??M</a> | </font></font></font></font></font><a href="projects/tfnav.html">Project
-page</a><font style="color: rgb(255, 255, 214);" size="3"> | </font><a href="http://wiki.ros.org/tensor_field_nav">Code</a></font></font>]</font></font><big><b><br />
+page</a><font style="color: rgb(255, 255, 214);" size="3"> | </font><a href="http://wiki.ros.org/tensor_field_nav">Code release on ROS</a></font></font>]</font></font><big><b><br />
       </b></big></font></font></font>
       </div>
       <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <big><b> <br />
@@ -72,17 +72,7 @@ this question, where moving paths of the robot are planned to account for
 both global efficiency for fast exploration and local smoothness to obtain
 high-quality scans. An RGB-D camera, attached to the robot arm, is dictated
 by the desired reconstruction quality as well as the movement of the robot
-itself. Our key idea is to harness a time-varying tensor field to guide robot
-movement, and then solve for 3D camera control under the constraint of the
-2D robot moving path. The tensor field is updated in real time, conforming
-to the progressively reconstructed scene. We show that tensor fields are
-well suited for guiding autonomous scanning for two reasons: first, they
-contain sparse and controllable singularities that allow generating a locally
-smooth robot path, and second, their topological structure can be used for
-globally efficient path routing within a partially reconstructed scene. We
-have conducted numerous tests with a mobile robot, and demonstrate that
-our method leads to a fluent exploration and high-quality reconstruction of
-unknown indoor scenes.</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
+itself. Our key idea is to harness a time-varying tensor field ...</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
         <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><big style="color: rgb(255, 255, 214);"> <br />
         </big></font></font></big></span></div>
       <big style="color: rgb(255, 255, 214);"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <font><b><font size="3"><b><span style="font-weight: normal;"><span style="font-weight: bold;"> <br />
@@ -128,6 +118,26 @@ visual similarity between deformed shapes and models from a shape repository.
 Our basic premise is that if a correspondence between two chairs (or
 airplanes, bicycles, etc.) is correct, then a reasonable deformation between
 the two chairs anchored on ...</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
+        <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><big style="color: rgb(255, 255, 214);"> <br />
+        </big></font></font></big></span></div>
+      <big style="color: rgb(255, 255, 214);"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <font><b><font size="3"><b><span style="font-weight: normal;"><span style="font-weight: bold;"> <br />
+      </span></span></b></font></b></font> </font></font></font></big></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; width: 202px;"><img style="width: 200px;" alt="li_sig17_grass" src="images/publications/remil_pg17.jpg" /> </td>
+      <td style="vertical-align: top; color: rgb(225, 225, 225); width: 713px;">
+      <div style="text-align: justify; margin-left: 5px; line-height: 160%; background-color: rgb(0, 14, 24); width: 669px;"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3">Oussama Remil, Qian Xie, Xingyu Xie, <b>Kai
+Xu</b></font> and <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><a href="http://cmee.nuaa.edu.cn/News_View.asp?NewsID=590" target="_blank">Jun Wang</a></font></font>, "<b><span style="color: rgb(229, 229, 229);">Data-Driven Sparse Priors of 3D Shapes,</span></b>"<font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><i> Computer Graphics Forum (Pacific Graphics 2017)</i>. To appear. <font style="color: rgb(255, 255, 214);" size="3">[<font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><a href="papers/remil_pg17_ddsp.pdf">PDF, ??M</a></font></font></font></font></font>]</font></font><big><b><br />
+      </b></big></font></font></font>
+      </div>
+      <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <big><b> <br />
+      </b></big></font></font></font>
+      <div style="text-align: justify; margin-left: 5px; background-color: rgb(0, 14, 24); width: 669px;"><big style="color: rgb(255, 255, 214);">We present a sparse optimization framework for extracting sparse shape priors from a collection of 3D models. Shape priors are
+defined as point-set neighborhoods sampled from shape surfaces which convey important information encompassing normals
+and local shape characterization. A 3D shape model can be considered to be formed with a set of 3D local shape priors,
+while most of them are likely to have similar geometry. Our key observation is that the local priors extracted from a family of
+3D shapes lie in a very low-dimensional manifold. Consequently, a compact and informative subset of priors can be learned
+to efficiently encode all shapes of the same family ...</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
         <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><big style="color: rgb(255, 255, 214);"> <br />
         </big></font></font></big></span></div>
       <big style="color: rgb(255, 255, 214);"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <font><b><font size="3"><b><span style="font-weight: normal;"><span style="font-weight: bold;"> <br />
