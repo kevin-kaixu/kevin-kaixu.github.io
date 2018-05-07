@@ -5,7 +5,7 @@
 
 
   
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Tensor Field Guided Navigation - Kevin (Kai) Xu's Homepage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Projective Style - Kevin (Kai) Xu's Homepage</title>
   
 
   
@@ -54,69 +54,68 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="width: 200px;" alt="sa16_logo" src="tfnav/sa2017_logo.jpg" /> </div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 220px;" alt="s18_logo" src="projstyle/s2018_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
-      <div style="text-align: center; line-height: 200%;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-      <span style="font-family: Arial;">Autonomous Reconstruction of Unknown Indoor Scenes Guided by
-Time-varying Tensor Fields<br />
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial;">Object-Aware Guidance for Autonomous Scene Reconstruction<br />
       </span></span></font> </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu<small><sup>1,2</sup></small>,&nbsp;
-            </span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Lintao Zheng</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><small><sup>2</sup></small>,&nbsp; Zihao Yan<small><sup>1</sup></small>, &nbsp;Guohang Yan<small><sup>1</sup></small>,&nbsp; Eugene Zhang<small><sup>3</sup></small>,</span></font></p>
-        <p><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Matthias Niessner<sup>4</sup>,&nbsp;Oliver Deussen<sup>5</sup>, Daniel Cohen-Or<small><sup>1,6</sup></small>, Hui Huang<small><sup>1</sup></small><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Ligang Liu<small><sup>1</sup></small>,&nbsp; Xi Xia<small><sup>1</sup></small>,&nbsp;
+            Han Sun<small><sup>1</sup></small>,&nbsp;Qi Shen<small><sup>1</sup></small>,&nbsp;&nbsp;Juzhan Xu</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Bin Chen</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Hui Huang</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Kai Xu<small><sup>3*</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
           <br />
           <br />
-          </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Shenzhen University, &nbsp;&nbsp; <sup>2</sup>National University of Defense Technology,&nbsp;&nbsp;&nbsp;
-            <sup>3</sup>Oregon State University&nbsp;&nbsp;&nbsp; <sup>4</sup>Stanford University&nbsp;&nbsp;&nbsp; <sup>5</sup>University of Konstanz&nbsp;&nbsp;&nbsp; <sup>6</sup>Tel-Aviv University<br />
-            <br />
-            </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
-              </font><big style="color: rgb(255, 255, 214);">ACM Transactions
-                on Graphics (SIGGRAPH Asia 2017), 36(6)</big><br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>University of Science and Technology of China, &nbsp; <sup>2</sup>Shenzhen University,&nbsp;&nbsp;
+            <sup>3</sup>National University of Defense Technology<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(* Kai Xu is corresponding author)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><big style="color: rgb(255, 255, 214);">ACM Transactions
+              on Graphics (SIGGRAPH 2018), 37(4)</big><br />
           <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
             <br />
             </span></font><br />
         </p>
       </div>
-      <div style="text-align: center;"><img style="width: 900px;" alt="overlapping" src="tfnav/teaser.jpg" /></div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="nbo/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure 1:</span> We present an autonomous system for active object identification in an indoor scene (a), with consecutive depth acquisitions, for
-online scene modeling. The scene is first roughly scanned, and segmented to generate 3D object proposals. Targeting an object proposal (b),
-the robot performs multi-view object identification, based on a 3D shape database, driven by a 3D Attention Model. The retrieved 3D models
-are inserted into the scanned scene (c), replacing the corresponding object scans, thus incrementally constructing a 3D scene model (d).</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">Autonomous scene scanning and reconstruction on a real office scene using our object-aware guidance approach. In each column (a)-(d), the object
+marked with the red rectangular frame is the object-of-interest (OOI). The upper row shows the navigation path (in dotted red) with previous scanning views
+(shown as white dots) and the current position of the robot. The objects in different colors are the reconstructed objects in the scene. The bottom row shows
+the depth data (left) and the RGB image (right) from the current view of the robot. Our approach achieves both global path planning and local view planning
+on-the-fly within one single navigation pass and obtains the reconstructed scene with semantic objects (d).</big></div>
       <br />
       <br />
       <br />
-      <table width="949" border="0" cellpadding="2" cellspacing="2" style="text-align: left; width: 872px; margin-left: 34px; height: 744px;">
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 744px;" border="0" cellpadding="2" cellspacing="2">
         <tbody>
           <tr>
-            <td width="170" style="vertical-align: top; width: 99px; height: 7px;"><small>
+            <td style="vertical-align: top; width: 99px; height: 7px;"><small>
             </small>
             <div style="text-align: right;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Abstract</small></font></small></div>
             <small> </small></td>
-            <td width="765" style="vertical-align: top; width: 753px; height: 7px;">
+            <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">Autonomous reconstruction of unknown scenes by a mobile robot inherently
-poses the question of balancing between exploration efficacy and reconstruction
-quality. We present a navigation-by-reconstruction approach to address
-this question, where moving paths of the robot are planned to account for
-both global efficiency for fast exploration and local smoothness to obtain
-high-quality scans. An RGB-D camera, attached to the robot arm, is dictated
-by the desired reconstruction quality as well as the movement of the robot
-itself. Our key idea is to harness a time-varying tensor field to guide robot
-movement, and then solve for 3D camera control under the constraint of the
-2D robot moving path. The tensor field is updated in real time, conforming
-to the progressively reconstructed scene. We show that tensor fields are
-well suited for guiding autonomous scanning for two reasons: first, they
-contain sparse and controllable singularities that allow generating a locally
-smooth robot path, and second, their topological structure can be used for
-globally efficient path routing within a partially reconstructed scene. We
-have conducted numerous tests with a mobile robot, and demonstrate that
-our method leads to a fluent exploration and high-quality reconstruction of
-unknown indoor scenes.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">To carry out autonomous 3D scanning and online reconstruction of unknown
+indoor scenes, one has to find a balance between global exploration of
+the entire scene and local scanning of the objects within it. In this work,
+we propose a novel approach, which provides object-aware guidance for
+autoscanning, to exploring, reconstructing, and understanding an unknown
+scene within one navigational pass. Our approach interleaves between object
+analysis to identify the next best object (NBO) for global exploration, and
+object-aware information gain analysis to plan the next best view (NBV) for
+local scanning. First, an objectness-based segmentation method is introduced
+to extract semantic objects from the current scene surface via a multi-class
+graph cuts minimization. Then, an object of interest (OOI) is identified as
+the NBO which the robot aims to visit and scan. The robot then conducts
+fine scanning on the OOI with views determined by the NBV strategy. When
+the OOI is recognized as a full object, it is replaced by its most similar 3D
+model in a shape database. The algorithm iterates until all of the objects
+are recognized and reconstructed in the scene. Various experiments and
+comparisons have shown the feasibility of our proposed approach.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -135,7 +134,7 @@ unknown indoor scenes.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="../papers/xu_siga17_tfnav.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="tfnav/paper.png" /></a></div>
+                  <div id="main2"><a href="../papers/liu_sig18_nbo.pdf"><img src="nbo/paper.jpg" alt="Paper PDF" width="152" height="274" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -146,10 +145,11 @@ unknown indoor scenes.</big><br />
                     <br />
                     <br />
                     </span></font></p>
+                    <p>&nbsp;</p>
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                      <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="../papers/xu_siga17_tfnav.pdf">Paper, 16.3MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font></p>
-                    <p><font style="color: rgb(255, 255, 214);" size="3"><strong><a href="xu_siga17_tfnav_appendix.pdf">Appendix, 483KB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                        <strong><a href="../papers/liu_sig18_nbo.pdf">PDF, ??MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
                     </p>
                   </td>
                 </tr>
@@ -171,12 +171,12 @@ Slides</small></font></td>
               <tbody>
                 <tr>
                   <td style="vertical-align: top; width: 0px;">
-                  <div id="main2"><a href="../slides/tfnav_siga17_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <div id="main2"><a href="../slides/nbo_sig18_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
                   </td>
                   <td style="vertical-align: top; width: 354px;"><br />
                   <br />
                   <br />
-                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/tfnav_siga17_talk.pdf">Slides, 4MB</a><br /></strong></font>
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/nbo_sig18_talk.pdf">PDF, ??MB</a><br /></strong></font>
                   </td>
                 </tr>
               </tbody>
@@ -198,7 +198,7 @@ Slides</small></font></td>
                   <td style="vertical-align: top; width: 30px;">
                   <div id="main2">
                   
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/1Kcl0su-9LU?rel=0" frameborder="0" allowfullscreen></iframe></div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/FZQGituE-p4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
                   </td>
                   <td style="vertical-align: top; width: 690px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     </span></font><br />
@@ -212,7 +212,7 @@ Slides</small></font></td>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
-                    <p><font style="color: rgb(255, 255, 214);" size="3"><strong><a href="https://www.dropbox.com/s/irikg300qj7i3j1/tfnav_video.mp4?dl=0">Download MP4 （272MB）</a></strong></font></p></td>
+                    <p><font style="color: rgb(255, 255, 214);" size="3"><strong><a href="https://www.dropbox.com/s/e4p2axyxr1juuq0/nbo_video.mp4?dl=0">Download MP4 （191MB）</a></strong></font></p></td>
                 </tr>
               </tbody>
             </table></td>
@@ -220,48 +220,38 @@ Slides</small></font></td>
           <tr>
             <td style="vertical-align: top; height: 9px; width: 99px;"><br />
             </td>
-            <td style="vertical-align: top; height: 9px; width: 753px;"><p>&nbsp;</p></td>
+            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
           </tr>
+          
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center; width: 750px;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="tfnav/overview.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="nbo/overview.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-2:</span> An overview of our method and system. Our system runs an online scene reconstruction and employs an occupancy map for storing spatial occupancy
-information (a). The progressively reconstructed 3D scene geometry is projected onto the floor plane (b-left), to compute a geometry-aware time-varying
-tensor fields. Robot movement is locally directed by path advection over the fields (b-middle), and globally guided with path finding, based on the field
-topology (b-right). A smooth camera trajectory is computed along the path (c).</big><big style="color: rgb(51, 204, 255);"><span style="font-weight: bold;" /></big>
-            </div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Pipeline of our object-guided autonomous scene scanning and reconstruction approach.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center; width: 750px;"><img style="width: 500px;" alt="MV-RNN" title="MV-RNN" src="tfnav/topo.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="nbo/result1.jpg" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-3:</span> The topological skeleton of tensor field can be computed for a partially
-scanned scene (a) and used for guiding the robot scanning. When the
-robot (white dot) arrives at a trisector, a minimum cost spanning tree is generated
-from the topological graph, to enable branch selection (b). When the
-reconstruction is complete, the field topology (c) conforms approximately
-to the medial axis of the full scene boundary (d).</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual results of object-aware scanning for virtual simulation.</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center; width: 750px;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="tfnav/gallery.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="nbo/result2.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);"><span style="font-weight: bold;">Figure
-4: </span>Four real scenes scanned and reconstructed by our autonomous system. For each scene, we show the final field topology (left) and the reconstruction
-result (right). The scene in (c) is not closed, due to inaccessible narrow doors; the scanning was terminated by human..</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual results of object-aware scanning for real running.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
+            
+            
             
             </td>
           </tr>
@@ -275,8 +265,9 @@ result (right). The scene in (c) is not closed, due to inaccessible narrow doors
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments
-and suggestions.</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments.
+This work was supported in part by NSFC (61572507, 61532003,
+61622212) for Kai Xu.</big> ...</div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -287,13 +278,12 @@ and suggestions.</big></div>
             </td>
           </tr>
           <tr>
-            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code</a></small></font></small></td>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We have released our source code built on top of the ROS, and contributed a software package to ROS.<br />
-            <br />
-            <big style="font-weight: bold;"><a href="http://wiki.ros.org/tensor_field_nav"> ROS package of tensor_field_nav</a></big><br />
-            <br />
-            </big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">The source code and the benchmark dataset can be downloaded <a href="https://github.com/" target="_blank">here</a>.</big><big style="color: rgb(255, 255, 214);"><br />
+              </big></p>
+            </div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -301,40 +291,46 @@ and suggestions.</big></div>
             </td>
             <td style="vertical-align: top; width: 753px;"><br /></td>
           </tr>
-          
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{xu_siga17,<br />
-&nbsp;&nbsp;&nbsp; title = {Autonomous Reconstruction of Unknown Indoor Scenes Guided by
-Time-varying Tensor Fields},<br />
+{liu_sig18,<br />
+&nbsp;&nbsp;&nbsp; title = {Object-Aware Guidance for Autonomous Scene Reconstruction},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {</font>Kai Xu and Lintao Zheng and Zihao Yan and Guohang Yan and Eugene Zhang and Matthias Niessner and Oliver Deussen and Daniel Cohen-Or and Hui Huang},<br />
+= {Ligang Liu and Xi Xia and Han Sun and Qi Shen and Juzhan Xu and Bin Chen and Hui Huang and Kai Xu},<br />
             &nbsp;&nbsp;&nbsp;
             journal
-= {ACM Transactions on Graphics (Proc. of SIGGRAPH Asia 2017)},<br />
+= {ACM Transactions on Graphics},<br />
             &nbsp;&nbsp;&nbsp;
             volume
-= {36},<br />
+= {37},<br />
             &nbsp;&nbsp;&nbsp;
             number
-= {6},<br />
+= {4},<br />
             &nbsp;&nbsp;&nbsp;
             pages
-= {Article No. 202},<br />
+= {to appear},<br />
             &nbsp;&nbsp;&nbsp;
             </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
-= {2017}<br />
+= {2018}<br />
 }</font></font></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
           </tr>
+          
         </tbody>
       </table>
       <br />
       <br />
-      <a href="http://english.nudt.edu.cn/"> </a>
+      <br />
+      <br />
+      <div id="main2" style="text-align: center;"><img src="../icons/USTC_logo.png" title="USTC" alt="USTC" style="width: 70px; height: 109px;" /><img style="width: 70px; height: 109px;" alt="SZU" title="SZU" src="../icons/SZU_logo.png" /><img style="width: 70px; height: 109px;" alt="NUDT" title="NUDT" src="../icons/NUDT_logo.png" /></div>
+      <br />
+      <br />
+      <ul>
+      </ul>
+      <div style="text-align: center;"><a href="http://english.nudt.edu.cn/"> </a></div>
       <ul style="text-align: center;">
         <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
       </ul>
