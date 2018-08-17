@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Learning to Group and Label Fine-Grained Shape Components - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Useful Links</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<br />
+<br />
+<table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
+      </font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="scores/sa2018_logo.png" /></div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
+      </span></font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial;">Learning to Group and Label Fine-Grained Shape Components<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Xiaogang Wang<small><sup>1</sup></small>,&nbsp; Bin Zhou<small><sup>1</sup></small>,&nbsp;
+            Haiyue Fang<small><sup>1</sup></small>,&nbsp;Xiaowu Chen</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;Qinping Zhao<small><sup>1</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">, &nbsp;Kai Xu<small><sup>2,3</sup></small><br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Beihang University, &nbsp; <sup>2</sup>National University of Defense Technology,&nbsp;&nbsp;
+            <sup>3</sup>Princeton University<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(Kai is corresponding author.)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><big style="color: rgb(255, 255, 214);">ACM Transactions
+              on Graphics (SIGGRAPH Asia 2018), 37(6)</big><br />
+          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+            </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="fglabel/teaser.jpg" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">This work studies a novel problem of semantic labeling of raw 3D models from online shape repositories, composed of highly fine-grained components.
+Given a structurally complex 3D model, which comprises numerous human-crafted components, our method produces high quality labeling result (indicated
+by distinct colors). This is achieved by aggregating the components into part hypotheses and characterizing these mid-level elements for robust grouping and
+labeling of fine-grained components.</big></div>
+      <br />
+      <br />
+      <br />
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 744px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; width: 99px; height: 7px;"><small>
+            </small>
+            <div style="text-align: right;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Abstract</small></font></small></div>
+            <small> </small></td>
+            <td style="vertical-align: top; width: 753px; height: 7px;">
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">A majority of stock 3D models in modern shape repositories are assembled
+with many fine-grained components. The main cause of such data form is
+the component-wise modeling process widely practiced by human modelers.
+These modeling components thus inherently reflect some function-based
+shape decomposition the artist had in mind during modeling. On the other
+hand, modeling components represent an over-segmentation since a functional
+part is usually modeled as a multi-component assembly. Based on
+these observations, we advocate that labeled segmentation of stock 3D models
+should not overlook the modeling components and propose a learning
+solution to grouping and labeling of the fine-grained components. However,
+directly characterizing the shape of individual components for the purpose
+of labeling is unreliable, since they can be arbitrarily tiny and semantically
+meaningless. We propose to generate part hypotheses from components
+based on a hierarchal grouping strategy. Part hypotheses are mid-level elements
+which are more probable to carry semantic information. A multi-scale
+3D convolutional neural network is trained to extract context-aware features
+for the hypotheses. To accomplish a labeled segmentation of the whole
+shape, we formulate higher-order conditional random fields (CRFs) to infer
+an optimal label assignment for all components. Extensive experiments
+demonstrate that our method achieves significantly robust labeling results
+on raw 3D models from public shape repositories. Our work also contributes
+the first benchmark for component-wise labeling.</big><br />
+                <big style="color: rgb(255, 255, 214);"> </big></p>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; height: 134px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
+            <small>Paper</small></font></td>
+            <td style="vertical-align: top; height: 134px; width: 753px;">
+            <table width="600" border="0" cellpadding="2" cellspacing="2" style="text-align: left; height: 235px; width: 580px;">
+              <tbody>
+                <tr>
+                  <td height="228" style="vertical-align: top; width: 122px;">
+                  <div id="main2"><a href="../papers/wang_siga18_fglabel.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="fglabel/paper.jpg" /></a></div>
+                  </td>
+                  <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    </span></font></p>
+                    <p>&nbsp;</p>
+                    <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                      <br />
+                      </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
+                        <strong><a href="../papers/wang_siga18_fglabel.pdf">PDF, ??MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 7px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 7px; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><br />
+Slides</small></font></td>
+            <td style="vertical-align: top; width: 753px;">
+            <table style="text-align: left; width: 427px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; width: 0px;">
+                  <div id="main2"><a href="../slides/fglable_siga18_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  </td>
+                  <td style="vertical-align: top; width: 354px;"><br />
+                  <br />
+                  <br />
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/fglable_siga18_talk.pdf">PDF, ??MB</a><br /></strong></font>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
+          </tr>
+          
+          <tr>
+            <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
+            <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 700px;" alt="overview" title="overview" src="fglabel/overview.jpg" /></div>
+            <div style="text-align: center;"><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">An overview of our approach. Given a 3D model comprising many components (a), our method first performs hierarchical sampling of candidate part
+hypotheses with a bottom-up grouping procedure (b). Each candidate is then fed into a multi-scale Convolutional Neural Networks which predicts
+its label and regresses a confidence score against each part label (c). Finally, the optimal label of each component is inferred with a higher-order
+Conditional Random Fields, based on the confidence scores (d).</big></div>
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 600px;" alt="architecture" title="architecture" src="fglabel/architecture.jpg" /></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">The architecture of our multi-scale Convolutional Neural Networks (CNNs) for part hypothesis classification and confidence regression.</big><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="fglabel/gallery.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">A gallery of semantic labeling results on raw 3D models with complicated structure. ‘GT’ denotes ground-truth labeling annotated manually.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments.
+This work was supported in part by NSFC (61572507, 61532003,
+61622212).</big></div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">The source code and dataset will be released soon.</big><big style="color: rgb(255, 255, 214);"><br />
+                <br />
+              </big></p>
+            </div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br /></td>
+          </tr>
+          
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
+{wang_siga18,<br />
+&nbsp;&nbsp;&nbsp; title = {Learning to Group and Label Fine-Grained Shape Components},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+= {Xiaogang Wang and Bin Zhou and Haiyue Fang and Xiaowu Chen and Qinping Zhao and Kai Xu},<br />
+            &nbsp;&nbsp;&nbsp;
+            journal
+= {ACM Transactions on Graphics (SIGGRAPH Asia 2018)},<br />
+            &nbsp;&nbsp;&nbsp;
+            volume
+= {37},<br />
+            &nbsp;&nbsp;&nbsp;
+            number
+= {6},<br />
+            &nbsp;&nbsp;&nbsp;
+            pages
+= {to appear},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2018}<br />
+}</font></font></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><a target="_blank" href="http://english.nudt.edu.cn"></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a><a target="_blank" href="http://ev.buaa.edu.cn/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/BUAA_logo.png" /></a><a target="_blank" href="http://www.nudt.edu.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a><a target="_blank" href="https://www.princeton.edu/"><img style="width: 70px; height: 109px;" alt="Princeton University" title="PU" src="../icons/PU_logo.png" /></a></div>
+      <br />
+      <br />
+      <ul>
+      </ul>
+      <div style="text-align: center;"><a href="http://english.nudt.edu.cn/"> </a></div>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>

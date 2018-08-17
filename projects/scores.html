@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Shape Composition with Recursive Substructure Priors - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Useful Links</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<br />
+<br />
+<table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
+      </font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="scores/sa2018_logo.png" /></div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
+      </span></font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial;">SCORES: Shape Composition with Recursive Substructure Priors<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Chenyang Zhu<small><sup>1,2</sup></small>,&nbsp; Kai Xu<small><sup>2,3</sup></small>,&nbsp;
+            Siddhartha Chaudhuri<small><sup>4,5</sup></small>,&nbsp;Renjiao Yi</span><small><sup>1,2</sup></small><span style="font-family: Arial;">, &nbsp;Hao Zhang<small><sup>1</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Simon Fraser University, &nbsp; <sup>2</sup>National University of Defense Technology,&nbsp;&nbsp;
+            <sup>3</sup>Princeton University,&nbsp;&nbsp;
+            <sup>4</sup>Adobe Research,&nbsp;&nbsp;
+            <sup>5</sup>IIT Bombay<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(Kai is corresponding author.)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><big style="color: rgb(255, 255, 214);">ACM Transactions
+              on Graphics (SIGGRAPH Asia 2018), 37(6)</big><br />
+          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+            </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="scores/teaser.jpg" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We introduce SCORES, a neural network which learns structure fusion for 3D shape composition. SCORES takes box abstractions of two sets of parts
+(red and green) from two source shapes (a-b), and a rough initial placement of the boxes (c), and outputs an optimized box structure (d), leading to quality
+geometry construction; see (e)-(f) for two views. A unique feature of SCORES is that it is not merely learning how to connect parts; the goal is to produce a
+plausible and coherent final shape structure, which may necessitate adding new parts (blue bicycle seat) or removing duplicates (red chair back). To handle
+creatively composed shapes, SCORES learns a plausibility prior over substructures at various levels of abstraction, rather than complete shapes alone.</big></div>
+      <br />
+      <br />
+      <br />
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 744px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; width: 99px; height: 7px;"><small>
+            </small>
+            <div style="text-align: right;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Abstract</small></font></small></div>
+            <small> </small></td>
+            <td style="vertical-align: top; width: 753px; height: 7px;">
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">We introduce SCORES, a recursive neural network for shape composition. Our
+network takes as input sets of parts from two or more source 3D shapes and
+a rough initial placement of the parts. It outputs an optimized part structure
+for the composed shape, leading to high-quality geometry construction. A
+unique feature of our composition network is that it is not merely learning
+how to connect parts. Our goal is to produce a coherent and plausible 3D
+shape, despite large incompatibilities among the input parts. The network
+may significantly alter the geometry and structure of the input parts and
+synthesize a novel shape structure based on the inputs, while adding or
+removing parts to minimize a structure plausibility loss. We design SCORES
+as a recursive autoencoder network. During encoding, the input parts are
+recursively grouped to generate a root code. During synthesis, the root code
+is decoded, recursively, to produce a new, coherent part assembly. Assembled
+shape structures may be novel, with little global resemblance to training
+exemplars, yet have plausible substructures. SCORES therefore learns a
+hierarchical substructure shape prior based on per-node losses. It is trained
+on structured shapes from ShapeNet, and is applied iteratively to reduce the
+plausibility loss.We showresults of shape composition from multiple sources
+over different categories of man-made shapes and compare with state-of-theart
+alternatives, demonstrating that our network can significantly expand
+the range of composable shapes for assembly-based modeling.</big><br />
+                <big style="color: rgb(255, 255, 214);"> </big></p>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; height: 134px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
+            <small>Paper</small></font></td>
+            <td style="vertical-align: top; height: 134px; width: 753px;">
+            <table width="600" border="0" cellpadding="2" cellspacing="2" style="text-align: left; height: 235px; width: 580px;">
+              <tbody>
+                <tr>
+                  <td height="228" style="vertical-align: top; width: 122px;">
+                  <div id="main2"><a href="../papers/zhu_siga18_scores.pdf"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="scores/paper.jpg" /></a></div>
+                  </td>
+                  <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    </span></font></p>
+                    <p>&nbsp;</p>
+                    <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                      <br />
+                      </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
+                        <strong><a href="../papers/zhu_siga18_scores.pdf">PDF, ??MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 7px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 7px; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><br />
+Slides</small></font></td>
+            <td style="vertical-align: top; width: 753px;">
+            <table style="text-align: left; width: 427px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; width: 0px;">
+                  <div id="main2"><a href="../slides/scores_siga18_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  </td>
+                  <td style="vertical-align: top; width: 354px;"><br />
+                  <br />
+                  <br />
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/scores_siga18_talk.pdf">PDF, ??MB</a><br /></strong></font>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
+          </tr>
+          
+          <tr>
+            <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
+            <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="scores/overview.jpg" /></div>
+            <div style="text-align: center;"><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Overview of our SCORES shape composition pipeline, iterating over three key stages: (a) substructure embedding via bottom-up structure encoding
+(blue arrows), (b) substructure adjustment through top-down code adjustment (green arrows) and structure decoding (orange arrows), and (c) hierarchy
+resampling. The input consists of a group of parts, along with their OBBs, from two source shapes. Note that neither semantic nor relational information
+about the input parts is required throughout the pipeline; only that the source shapes are segmented.</big></div>
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 500px;" alt="iteration" title="iteration" src="scores/iter.jpg" /></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Change of representation error with iterative part adjustment, with
+(top row) and without (bottom row) hierarchy resampling. Given a randomly
+perturbed part configuration of a bicycle model, we show the results of
+adjustment at various iteration steps (marked with red vertical lines). Our
+method converges better with hierarchy resampling.</big><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 500px;" alt="Comparison" title="Comparison" src="scores/comp.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual comparison of shape composition results with ComplementMe
+[Sung et al. 2017] and Fit-and-Diverse [Xu et al. 2012].</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="scores/gallery.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual examples of challenging compositions achieved by SCORES over six object categories. In each block, the leftmost box shows parts selected
+from two source shapes for merging (red and green). The middle box shows the OBB inputs to the algorithm – an initial hierarchy is computed for each group
+of parts separately (as a subgraph of the inferred source hierarchy) and they are then linked by a common parent. The rightmost box shows the final merged
+result (OBB and fine-grained geometry). Redundant parts in the sources are circled with blue dots (b). New parts synthesized to better fit the shape prior are
+colored in blue (d). In (j), we show cross-category part merging between Chair and Table. Substructure adjustment was conducted based on the substructure
+model (discrete latent space) learned for chairs, thus yielding a chair-like final shape.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments.
+This work was supported in part by NSFC (61572507, 61532003,
+61622212) for Kai Xu, NSERC (611370) and a gift grant from Adobe
+Research for Hao Zhang.</big></div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">The source code and dataset will be released soon.</big><big style="color: rgb(255, 255, 214);"><br />
+                <br />
+              </big></p>
+            </div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br /></td>
+          </tr>
+          
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
+{zhu_siga18,<br />
+&nbsp;&nbsp;&nbsp; title = {SCORES: Shape Composition with Recursive Substructure Priors},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+= {Chenyang Zhu and </font>Kai Xu and  Siddhartha Chaudhuri and Renjiao Yi and Hao Zhang},<br />
+            &nbsp;&nbsp;&nbsp;
+            journal
+= {ACM Transactions on Graphics (SIGGRAPH Asia 2018)},<br />
+            &nbsp;&nbsp;&nbsp;
+            volume
+= {37},<br />
+            &nbsp;&nbsp;&nbsp;
+            number
+= {6},<br />
+            &nbsp;&nbsp;&nbsp;
+            pages
+= {to appear},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2018}<br />
+}</font></font></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><a target="_blank" href="http://english.nudt.edu.cn"></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a><a target="_blank" href="http://www.sfu.ca/"><img style="width: 70px; height: 109px;" alt="SFU" title="SFU" src="../icons/SFU_logo.png" /></a><a target="_blank" href="http://www.nudt.edu.cn/"><img style="width: 70px; height: 109px;" alt="SIAT" title="SFU" src="../icons/NUDT_logo.png" /></a><a target="_blank" href="https://www.princeton.edu/"><img style="width: 70px; height: 109px;" alt="Princeton University" title="PU" src="../icons/PU_logo.png" /></a><a target="_blank" href="https://research.adobe.com/"><img style="width: 70px; height: 109px;" alt="Adobe Research" title="Adobe" src="../icons/Adobe_logo.png" /></a><a target="_blank" href="http://www.iitb.ac.in/"><img style="width: 70px; height: 109px;" alt="IIT Bombay" title="IIT" src="../icons/IITB_logo.png" /></a></div>
+      <br />
+      <br />
+      <ul>
+      </ul>
+      <div style="text-align: center;"><a href="http://english.nudt.edu.cn/"> </a></div>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
