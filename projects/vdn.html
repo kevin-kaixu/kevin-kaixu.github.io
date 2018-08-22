@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Learning Discriminative 3D Shape Representations by View Discerning Networks - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="#">Group</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<br />
+<br />
+<table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td height="1255" style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
+      </font>
+      <div style="text-align: center;"></div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
+      </span></font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial;">Learning Discriminative 3D Shape
+Representations by View Discerning Networks<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Biao Leng<small><sup>1</sup></small>,&nbsp; Cheng Zhang<small><sup>1</sup></small>,&nbsp;
+            Xiaocheng Zhou<small><sup>1</sup></small>,&nbsp;Cheng Xu</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;Kai Xu<small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Beihang University, &nbsp; <sup>2</sup>National University of Defense Technology<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(Kai Xu is the corresponding author.)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><big style="color: rgb(255, 255, 214);">IEEE Transactions
+              on Visualization and Computer Graphics, to appear</big><br />
+          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+            </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="vdn/teaser.png" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);"><strong>Abstract: </strong>In view-based 3D shape recognition, extracting discriminative
+visual representation of 3D shapes from projected images is
+considered the core problem. Projections with low discriminative ability
+can adversely influence the final 3D shape representation. Especially
+under the real situations with background clutter and object occlusion,
+the adverse effect is even more severe. To resolve this problem, we
+propose a novel deep neural network, View Discerning Network, which
+learns to judge the quality of views and adjust their contributions to
+the representation of shapes. In this network, a Score Generation Unit
+is devised to evaluate the quality of each projected image with score
+vectors. These score vectors are used to weight the image features
+and the weighted features perform much better than original features
+in 3D shape recognition task. In particular, we introduce two structures
+of Score Generation Unit, Channel-wise Score Unit and Part-wise Score
+Unit, to assess the quality of feature maps from different perspectives.
+Our network aggregates features and scores in an end-to-end framework,
+so that final shape descriptors are directly obtained from its output.
+Our experiments on ModelNet and ShapeNet Core55 show that View
+Discerning Network outperforms the state-of-the-arts in terms of the
+retrieval task, with excellent robustness against background clutter and
+object occlusion.</big></div>
+      <div align="center">
+        <p><br />
+          <strong><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+1">[<a href="https://arxiv.org/abs/1808.03823" target="_blank">Paper</a> | <a href="../papers/leng_tvcg18_vdn_sup.pdf">Supplementary material</a><a href="../papers/chen_tvcg18veram_sup.pdf"></a> | Code (coming soon)]</font></strong><br />
+        </p>
+        <p><br />
+      </p>
+      </div>
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 200px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          
+          
+          <tr>
+            <td height="148" style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
+{leng_vdn_2018,<br />
+&nbsp;&nbsp;&nbsp; title = {Learning Discriminative 3D Shape
+Representations by View Discerning Networks},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+</font>= {Biao Leng and Cheng Zhang and Xiaocheng Zhou and Cheng Xu and Kai Xu},<br />
+            &nbsp;&nbsp;&nbsp;
+            journal
+= {IEEE Transactions on Visualization and Computer Graphics},<br />
+            &nbsp;&nbsp;&nbsp;
+            volume
+= {??},<br />
+            &nbsp;&nbsp;&nbsp;
+            number
+= {??},<br />
+            &nbsp;&nbsp;&nbsp;
+            pages
+= {to appear},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2018}<br />
+}</font></font></div></td>
+          </tr>
+          <tr>
+            <td height="20" style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><a target="_blank" href="http://english.nudt.edu.cn"></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a></div>
+      <br />
+      <a href="http://english.nudt.edu.cn/"> </a>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
