@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Shape2Motion - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="../group.html">Group</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top">
+  <table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+    <tbody>
+    <tr>
+      <td height="1255" style="text-align: justify; width: 944px;">
+      <div style="text-align: center; line-height:220%"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><span style="font-family: Arial;">Shape2Motion: Joint Analysis of Motion Parts and Attributes from 3D Shapes<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Xiaogang Wang<small><sup>1</sup></small>,&nbsp; Bin Zhou<small><sup>1</sup></small>,&nbsp;
+            Yahao Shi<small><sup>1</sup></small>,&nbsp;Xiaowu Chen</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;Qinping Zhao</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;</span><span style="font-family: Arial;">Kai Xu<small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Beihang University, &nbsp; <sup>2</sup>National University of Defense Technology<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(Kai is  corresponding author.)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">CVPR 2019 (Oral)</span></font><br />
+          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+            </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="shape2motion/teaser.png" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);"><strong>Abstract: </strong>For the task of mobility analysis of 3D shapes, we propose
+joint analysis for simultaneous motion part segmentation
+and motion attribute estimation, taking a single 3D
+model as input. The problem is significantly different from
+those tackled in the existing works which assume the availability
+of either a pre-existing shape segmentation or multiple
+3D models in different motion states. To that end, we develop
+Shape2Motion which takes a single 3D point cloud as
+input, and jointly computes a mobility-oriented segmentation
+and the associated motion attributes. Shape2Motion is
+comprised of two deep neural networks designed for mobility
+proposal generation and mobility optimization, respectively.
+The key contribution of these networks is the novel
+motion-driven features and losses used in both motion part
+segmentation and motion attribute estimation. This is based
+on the observation that the movement of a functional part
+preserves the shape structure. We evaluate Shape2Motion
+with a newly proposed benchmark for mobility analysis of
+3D shapes. Results demonstrate that our method achieves
+the state-of-the-art performance both in terms of motion
+part segmentation and motion attribute estimation.</big></div>
+<br /><br />
+<div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="shape2motion/segcomp.png" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">Visual results of mobility analysis. For each example, we show from left to right the input point cloud, the extracted
+mobilities (motion parts and motion axes) and the point cloud with motion parts moved according to detected mobility.</big></div>
+      <div align="center">
+        <p><br />
+          <strong><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+1">[<a href="https://arxiv.org/abs/1903.00709" target="_blank">Paper</a> | <a href="../papers/wang_cvpr19_s2m_sup.pdf">Supplementary material</a><a href="../papers/chen_tvcg18veram_sup.pdf"></a> | <a href="https://github.com/wangxiaogang866/Shape2Motion.git" target="_blank">Code</a>]</font></strong><br />
+        </p>
+        <p><br />
+      </p>
+      </div>
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 200px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          
+          
+          <tr>
+            <td height="148" style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@inproceedings{yu2019partnet,<br />
+&nbsp;&nbsp;&nbsp; title = {PartNet: A Recursive Part Decomposition Network for Fine-grained and
+Hierarchical Shape Segmentation},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+</font>= {Fenggen Yu and Kun Liu and Yan Zhang and Chenyang Zhu and Kai Xu},<br />
+            &nbsp;&nbsp;&nbsp;
+            booktitle
+= {CVPR},<br />
+            &nbsp;&nbsp;&nbsp;
+            pages
+= {to appear},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2019}<br />
+}</font></font></div></td>
+          </tr>
+          <tr>
+            <td height="20" style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><a target="_blank" href="http://english.nudt.edu.cn"></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a></div>
+      <br />
+      <a href="http://english.nudt.edu.cn/"> </a>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>

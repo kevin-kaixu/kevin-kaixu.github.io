@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>PartNet - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="../group.html">Group</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top">
+  <table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+    <tbody>
+    <tr>
+      <td height="1255" style="text-align: justify; width: 944px;">
+      <div style="text-align: center; line-height:220%"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><span style="font-family: Arial;">PartNet: A Recursive Part Decomposition Network for Fine-grained and
+Hierarchical Shape Segmentation<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Fenggen Yu<small><sup>1</sup></small>,&nbsp; Kun Liu<small><sup>1</sup></small>,&nbsp;
+            Yan Zhang<small><sup>1</sup></small>,&nbsp;Chenyang Zhu</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Kai Xu<small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>Nanjing University, &nbsp; <sup>2</sup>National University of Defense Technology<br />
+          </big></p>
+        <p><big style="color: rgb(253,198,5);">(Fenggen and Kun are joint first authors; Kai is  corresponding author.)<br />
+          </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">CVPR 2019</span></font><br />
+          <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+            </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="partnet/teaser.png" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);"><strong>Abstract: </strong>Deep learning approaches to 3D shape segmentation are
+typically formulated as a multi-class labeling problem. Existing
+models are trained for a fixed set of labels, which
+greatly limits their flexibility and adaptivity. We opt for topdown
+recursive decomposition and develop the first deep
+learning model for hierarchical segmentation of 3D shapes,
+based on recursive neural networks. Starting from a full
+shape represented as a point cloud, our model performs
+recursive binary decomposition, where the decomposition
+network at all nodes in the hierarchy share weights. At each
+node, a node classifier is trained to determine the type (adjacency
+or symmetry) and stopping criteria of its decomposition.
+The features extracted in higher level nodes are
+recursively propagated to lower level ones. Thus, the meaningful
+decompositions in higher levels provide strong contextual
+cues constraining the segmentations in lower levels.
+Meanwhile, to increase the segmentation accuracy at each
+node, we enhance the recursive contextual feature with the
+shape feature extracted for the corresponding part. Our
+method segments a 3D shape in point cloud into an unfixed
+number of parts, depending on the shape complexity, showing
+strong generality and flexibility. It achieves the stateof-
+the-art performance, both for fine-grained and semantic
+segmentation, on the public benchmark and a new benchmark
+of fine-grained segmentation proposed in this work.
+We also demonstrate its application for fine-grained part
+refinements in image-to-shape reconstruction.</big></div>
+<br /><br />
+<div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="partnet/segcomp.png" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">Although PartNet is designed for fine-grained segmentation,
+          the recursive decomposition should work even better
+          for semantic segmentation since the latter is usually a
+          much coarser-level segmentation. </big><big style="color: rgb(255, 255, 214);">Comparison of semantic segmentation on the ShapeNet part dataset (Metric is part-wise IoU (%)). </big><big style="color: rgb(255, 255, 214);">For semantic segmentation, PartNet can be trained with
+          a consistent hierarchy for all shapes in a category. </big><big style="color: rgb(255, 255, 214);">The
+            training is can be done with any hierarchy that is consistent
+            across all training shapes. Therefore, we do not need
+            an extra process for hierarchy construction. Taking any random
+            hierarchy of one training shape as a “template”, we
+            unify the hierarchies of all the other shapes based on the semantic
+            part labels. Therefore, PartNet does not require an
+            extra supervision of part hierarchy for training for semantic
+            segmentation.</big></div>
+      <div align="center">
+        <p><br />
+          <strong><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+1">[<a href="https://arxiv.org/abs/1903.00709" target="_blank">Paper</a> | <a href="../papers/yu_cvpr19_partnet_sup.pdf">Supplementary material</a><a href="../papers/chen_tvcg18veram_sup.pdf"></a> | Code]</font></strong><br />
+        </p>
+        <p><br />
+      </p>
+      </div>
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 200px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          
+          
+          <tr>
+            <td height="148" style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@inproceedings{wang2019shape2motion,<br />
+&nbsp;&nbsp;&nbsp; title = {Shape2Motion: Joint Analysis of Motion Parts and Attributes from 3D Shapes},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+</font>= {Xiaogang Wang and Bin Zhou and Yahao Shi and Xiaowu Chen and Qinping Zhao and Kai Xu},<br />
+            &nbsp;&nbsp;&nbsp;
+            booktitle
+= {CVPR},<br />
+            &nbsp;&nbsp;&nbsp;
+            pages
+= {to appear},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2019}<br />
+}</font></font></div></td>
+          </tr>
+          <tr>
+            <td height="20" style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;">&nbsp;</td>
+          </tr>
+        </tbody>
+    </table>
+      <br />
+      <div id="main2" style="text-align: center;"><a target="_blank" href="http://english.siat.cas.cn/"><a target="_blank" href="http://english.nudt.edu.cn"></a><a target="_blank" href="http://www.tau.ac.il/index-eng.html"> </a></div>
+      <br />
+      <a href="http://english.nudt.edu.cn/"> </a>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
