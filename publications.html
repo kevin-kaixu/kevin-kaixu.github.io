@@ -104,7 +104,24 @@ Xu*</b></font></font></font></font></font></font></font></font><font style="colo
       </div>
       <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <big><b> <br />
       </b></big></font></font></font>
-      <div style="text-align: justify; margin-left: 5px; background-color: rgb(0, 14, 24); width: 669px;"><big style="color: rgb(255, 255, 214);">Learning deep generative models for 3D shape synthesis is largely limited by the difficulty of generating plausible shapes with correct topology and reasonable geometry. Indeed, learning the distribution of plausible 3D shapes seems a daunting task for most existing, structure-oblivious shape representation, given the significant topological variations of 3D objects even within the same shape category. Based on the consensus from 3D shape analysis that shape structure is defined as part composition and mutual relations between parts, we propose to model 3D shape variations with a deep generative network being both Part-Aware and Relation-Aware, named PARANet. The network is composed of an array of per-part VAE-GANs, generating semantic parts composing a complete shape, followed by a part assembly module that estimates a transformation for each part to correlate and assemble them into a plausible structure. Through splitting the generation of part composition and part relations ...</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
+      <div style="text-align: justify; margin-left: 5px; background-color: rgb(0, 14, 24); width: 669px;"><big style="color: rgb(255, 255, 214);">Learning deep generative models for 3D shape synthesis
+is largely limited by the difficulty of generating plausible
+shapes with correct topology and reasonable geometry.
+Indeed, learning the distribution of plausible 3D shapes
+seems a daunting task for most existing holistic shape representation,
+given the significant topological variations of
+3D objects even within the same shape category. Enlightened
+by the common view that 3D shape structure is characterized
+as part composition and placement, we propose
+to model 3D shape variations with a part-aware deep generative
+network which we call PAGENet. The network is
+composed of an array of per-part VAE-GANs, generating
+semantic parts composing a complete shape, followed by a
+part assembly module that estimates a transformation for
+each part to correlate and assemble them into a plausible
+structure. Through splitting the generation of part composition
+and part relations into separate networks, the difficulty
+of modeling structural variations of ...</big><span style="color: rgb(255, 255, 214);"><big style="color: rgb(255, 255, 214);"><br />
         <font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"><big style="color: rgb(255, 255, 214);"> <br />
         </big></font></font></big></span></div>
       <big style="color: rgb(255, 255, 214);"><font style="color: rgb(255, 255, 214);" size="3"><font style="color: rgb(255, 255, 214);" size="3"> <font style="color: rgb(255, 255, 214);" size="3"> <font><b><font size="3"><b><span style="font-weight: normal;"><span style="font-weight: bold;"> <br />
