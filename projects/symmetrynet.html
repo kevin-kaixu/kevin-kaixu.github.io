@@ -5,7 +5,7 @@
 
 
   
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Object-Aware Guidance - Kevin (Kai) Xu's Homepage</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SymmetryNet - Kevin (Kai) Xu's Homepage</title>
   
 
   
@@ -54,39 +54,38 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 220px;" alt="s18_logo" src="projstyle/s2018_logo.png" /></div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="symmetrynet/sa2020_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-      <span style="font-family: Arial; line-height: 38px">Object-Aware Guidance for Autonomous Scene Reconstruction<br />
-      </span></span></font> </div>
+      <div style="text-align: center;"> <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+          <span style="font-family: Arial; line-height: 38px">SymmetryNet: Learning to Predict Reflectional and Rotational Symmetries of 3D Shapes from Single-View RGB-D Images<br />
+          </span></span></font>      </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Ligang Liu<small><sup>1</sup></small>,&nbsp; Xi Xia<small><sup>1</sup></small>,&nbsp;
-            Han Sun<small><sup>1</sup></small>,&nbsp;Qi Shen<small><sup>1</sup></small>,&nbsp;&nbsp;Juzhan Xu</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Bin Chen</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Hui Huang</span><small><sup>2</sup></small><span style="font-family: Arial;">, &nbsp;Kai Xu<small><sup>2,3*</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Yifei Shi<small><sup>1</sup></small>,&nbsp; Junwen Huang<small><sup>1</sup></small>,&nbsp;Hongjia Zhang<small><sup>1</sup></small>,&nbsp;Xin Xu</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;Szymon Rusinkiewicz<small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">,&nbsp;Kai Xu</span><small><sup>1</sup></small><span style="font-family: Arial;"><br />
           <br />
           <br />
-            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>University of Science and Technology of China, &nbsp; <sup>2</sup>Shenzhen University,&nbsp;&nbsp;
-            <sup>3</sup>National University of Defense Technology<br />
+            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>National University of Defense Technology,&nbsp;&nbsp;
+            <sup>2</sup>Princeton University<br />
           </big></p>
-        <p><big style="color: rgb(253,198,5);">(* Kai Xu is the corresponding author)<br />
+        <p><big style="color: rgb(253,198,5);">(Kai Xu is the corresponding author.)<br />
           </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font><big style="color: rgb(255, 255, 214);">ACM Transactions
-              on Graphics (SIGGRAPH 2018), 37(4)</big><br />
+              on Graphics (SIGGRAPH Asia 2020), 39(6). Conditionally accepted.</big><br />
           <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
             <br />
             </span></font><br />
         </p>
       </div>
-      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="nbo/teaser.jpg" /></div>
+      <div id="main">
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="symmetrynet/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">Autonomous scene scanning and reconstruction on a real office scene using our object-aware guidance approach. In each column (a)-(d), the object
-marked with the red rectangular frame is the object-of-interest (OOI). The upper row shows the navigation path (in dotted red) with previous scanning views
-(shown as white dots) and the current position of the robot. The objects in different colors are the reconstructed objects in the scene. The bottom row shows
-the depth data (left) and the RGB image (right) from the current view of the robot. Our approach achieves both global path planning and local view planning
-on-the-fly within one single navigation pass and obtains the reconstructed scene with semantic objects (d).</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We propose an end-to-end deep neural network learned to predict both reflectional and rotational symmetries from single-view RGB-D images. For
+each example, we show the input RGB-D images with the object of interest segmented out (see the yellow masks) as well as the detection results over the
+unprojected 3D point clouds. Reflectional symmetries are depicted with red planes (reflection plane) and rotational symmetries with green lines (rotation axis).
+Note how our method is able to detect the composition of an arbitrary number of symmetries, possibly of different types, present in the same object.</big></div>
       <br />
       <br />
       <br />
@@ -99,23 +98,24 @@ on-the-fly within one single navigation pass and obtains the reconstructed scene
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">To carry out autonomous 3D scanning and online reconstruction of unknown
-indoor scenes, one has to find a balance between global exploration of
-the entire scene and local scanning of the objects within it. In this work,
-we propose a novel approach, which provides object-aware guidance for
-autoscanning, to exploring, reconstructing, and understanding an unknown
-scene within one navigational pass. Our approach interleaves between object
-analysis to identify the next best object (NBO) for global exploration, and
-object-aware information gain analysis to plan the next best view (NBV) for
-local scanning. First, an objectness-based segmentation method is introduced
-to extract semantic objects from the current scene surface via a multi-class
-graph cuts minimization. Then, an object of interest (OOI) is identified as
-the NBO which the robot aims to visit and scan. The robot then conducts
-fine scanning on the OOI with views determined by the NBV strategy. When
-the OOI is recognized as a full object, it is replaced by its most similar 3D
-model in a shape database. The algorithm iterates until all of the objects
-are recognized and reconstructed in the scene. Various experiments and
-comparisons have shown the feasibility of our proposed approach.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">We study the problem of symmetry detection of 3D shapes from single-view
+RGB-D images, where severe missing data renders geometric detection approach
+infeasible. We propose an end-to-end deep neural network which
+is able to predict both reflectional and rotational symmetries of 3D objects
+present in the input RGB-D image. Directly training a deep model for symmetry
+prediction, however, can quickly run into the issue of overfitting. We
+adopt a multi-task learning approach. Aside from symmetry axis prediction,
+our network is also trained to predict symmetry correspondences. In
+particular, given the 3D points present in the RGB-D image, our network
+outputs for each 3D point its symmetric counterpart corresponding to a
+specific predicted symmetry. In addition, our network is able to detect for
+a given shape multiple symmetries of different types. We also contribute a
+benchmark of 3D symmetry detection based on single-view RGB-D images.
+Extensive evaluation on the benchmark demonstrates the strong generalization
+ability of our method, in terms of high accuracy of both symmetry
+axis prediction and counterpart estimation. In particular, our method is
+robust in handling unseen object instances with large variation in shape,
+multi-symmetry composition, as well as novel object categories.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -134,7 +134,7 @@ comparisons have shown the feasibility of our proposed approach.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="../papers/liu_sig18_nbo.pdf"><img src="nbo/paper.jpg" alt="Paper PDF" width="152" height="274" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
+                  <div id="main2"><a href="https://arxiv.org/abs/x.x" target="_blank"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="symmetrynet/paper.jpg" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -149,7 +149,7 @@ comparisons have shown the feasibility of our proposed approach.</big><br />
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="../papers/liu_sig18_nbo.pdf">PDF, 25MB</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                        <strong><a href="https://arxiv.org/abs/x.x" target="_blank">PDF</a></strong></font><br />
                     </p>
                   </td>
                 </tr>
@@ -171,12 +171,12 @@ Slides</small></font></td>
               <tbody>
                 <tr>
                   <td style="vertical-align: top; width: 0px;">
-                  <div id="main2"><a href="../slides/nbo_sig18_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <div id="main2"><a href="../slides/symmetrynet_siga20_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
                   </td>
                   <td style="vertical-align: top; width: 354px;"><br />
                   <br />
                   <br />
-                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/nbo_sig18_talk.pdf">PDF, 7MB</a><br /></strong></font>
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/symmetrynet_siga20_talk.pdf">PDF</a><br /></strong></font>
                   </td>
                 </tr>
               </tbody>
@@ -188,70 +188,47 @@ Slides</small></font></td>
             </td>
             <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
           </tr>
-          <tr>
-            <td style="vertical-align: top; text-align: right; height: 29px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
-            <small>Video</small></font></td>
-            <td style="vertical-align: top; height: 29px; width: 753px;">
-            <table style="text-align: left; height: 104px; width: 764px;" border="0" cellpadding="2" cellspacing="2">
-              <tbody>
-                <tr>
-                  <td style="vertical-align: top; width: 30px;">
-                  <div id="main2">
-                  
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/FZQGituE-p4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                  </td>
-                  <td style="vertical-align: top; width: 690px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
-                    </span></font><br />
-                    </p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p>&nbsp;</p>
-                    <p><font style="color: rgb(255, 255, 214);" size="3"><strong><a href="https://www.dropbox.com/s/e4p2axyxr1juuq0/nbo_video.mp4?dl=0">Download MP4 （191MB）</a></strong></font></p></td>
-                </tr>
-              </tbody>
-            </table></td>
-          </tr>
-          <tr>
-            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
-            </td>
-            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
-          </tr>
           
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Algorithm Overview" title="Algorithm Overview" src="nbo/overview.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="symmetrynet/1.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Pipeline of our object-guided autonomous scene scanning and reconstruction approach.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">The pipeline of our proposed symmetry prediction method comprising three major components. Taking an RGB image and a depth image as input,
+the network first extract point-wise appearance and geometry feature maps. The features are then used for point-wise symmetry prediction via multi-task
+learning. The final symmetry predictions are made with symmetry aggregation and visibility-based verification.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="MV-RNN" title="MV-RNN" src="nbo/result1.jpg" /></div>
+            <div style="text-align: center;"><img src="symmetrynet/2.jpg" alt="iteration" width="530" height="561" style="width: 750px;" title="iteration" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual results of object-aware scanning for virtual simulation.</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Qualitative symmetry prediction results on ScanNet [Dai et al. 2017] and ShapeNet [Chang et al. 2015]. The first column has two images of the
+object, i.e. the input RGB image with the target object marked in green rectangle (upper) and the input depth image (lower). The second column shows the
+ground-truth symmetries of the objects. The last two columns visualize the predicted symmetries by our method. Our method is able to handle objects with
+all forms of symmetry compositions (reflectional symmetry only, rotational symmetry only and multi-symmetry).</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Gallery" title="Gallery" src="nbo/result2.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="symmetrynet/3.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual results of object-aware scanning for real running.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Qualitative comparisons to previous works (Geometric Fitting [Ecins et al. 2018], RGB-D Retrieval, PRS-Net [Gao et al. 2019] and Shape Completion [Li
+et al. 2014; Liu et al. 2019].) on both synthetic data and real data. The Geometric Fitting baseline fails to detect any symmetry. The PRS-Net baseline correctly
+predicts the number of symmetries but fails to regress the parameters of the symmetries accurately. The RGB-D Retrieval baseline could not predict the
+parameters of symmetries correctly. The Shape Completion baseline predicts accurate symmetries for objects with simple geometry, but fails on cases where
+the objects are novel or occluded. Our method achieves the best performance on the four examples.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
             
             
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
             
             </td>
           </tr>
@@ -266,12 +243,8 @@ Slides</small></font></td>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
             <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments.
-This work was supported in part by NSFC (61672482, 61672481,
-61622212, 61572507, 61532003, 61522213), the One Hundred Talent
-Project of the ChineseAcademy of Sciences, 973 Program (2015CB352501),
-Guangdong Science and Technology Program (2015A030312015) and
-Shenzhen Science and Technology Program (KQJSCX20170727101233642,
-JCYJ20151015151249564).</big></div>
+This work was supported in part by   National  Key  Research  and Development Program of China (No.  2018AAA0102200), NSFC (61572507, 61532003,
+61622212).</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -285,8 +258,8 @@ JCYJ20151015151249564).</big></div>
             <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">The source code can be downloaded <a href="https://github.com/againxx/nbo-autoscanning" target="_blank">here</a>.</big></p>
-              <p><big style="color: rgb(255, 255, 214);">The benchmark dataset can be downloaded <a href="https://github.com/againxx/OASC-Benchmark" target="_blank">here</a>.</big><big style="color: rgb(255, 255, 214);"><br />
+              <p><big style="color: rgb(255, 255, 214);">The full source code with both training and testing dataset will be released soon.</big><big style="color: rgb(255, 255, 214);"><br />
+                <br />
               </big></p>
             </div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
@@ -296,41 +269,33 @@ JCYJ20151015151249564).</big></div>
             </td>
             <td style="vertical-align: top; width: 753px;"><br /></td>
           </tr>
+          
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{liu_nbo_sig18,<br />
-&nbsp;&nbsp;&nbsp; title = {Object-Aware Guidance for Autonomous Scene Reconstruction},<br />
+{shi_siga20,<br />
+&nbsp;&nbsp;&nbsp; title = {SymmetryNet: Learning to Predict Reflectional and Rotational Symmetries of 3D Shapes from Single-View RGB-D Images},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {Ligang Liu and Xi Xia and Han Sun and Qi Shen and Juzhan Xu and Bin Chen and Hui Huang and Kai Xu},<br />
+= {Yifei Shi and Junwen Huang and Hongjia Zhang and Xin Xu and Szymon Rusinkiewicz and Kai Xu},<br />
             &nbsp;&nbsp;&nbsp;
             journal
-= {ACM Transactions on Graphics},<br />
+= {ACM Transactions on Graphics (SIGGRAPH Asia 2020)},<br />
             &nbsp;&nbsp;&nbsp;
             volume
-= {37},<br />
+= {39},<br />
             &nbsp;&nbsp;&nbsp;
             number
-= {4},<br />
-            &nbsp;&nbsp;&nbsp;
-            pages
-= {Article  104},<br />
+= {6},<br />
             &nbsp;&nbsp;&nbsp;
             </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
-= {2018}<br />
+= {2020}<br />
 }</font></font></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
           </tr>
-          
         </tbody>
       </table>
-      <br />
-      <br />
-      <br />
-      <br />
-      <div id="main2" style="text-align: center;"><img src="../icons/USTC_logo.png" title="USTC" alt="USTC" style="width: 70px; height: 109px;" /><img style="width: 70px; height: 109px;" alt="SZU" title="SZU" src="../icons/SZU_logo.png" /><img style="width: 70px; height: 109px;" alt="NUDT" title="NUDT" src="../icons/NUDT_logo.png" /></div>
       <br />
       <br />
       <ul>
@@ -344,7 +309,7 @@ JCYJ20151015151249564).</big></div>
   </tbody>
 </table>
 <b><br />
-</b> </div>
+</b> </div></div>
 </div>
 <!-- end main -->
 <!-- footer -->

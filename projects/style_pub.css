@@ -6,7 +6,7 @@ h1 {font-size:24px; font-weight:normal; color:#FFFFFF; margin:15px 0 10px 0;}
 h2 {font-size:20px; font-weight:normal; margin:10px 0;}
 img {border:none;}
 br {
-	line-height: 10px;
+	line-height: 20px;
 }
 
 #container {width:1000px; margin:0 auto;}
@@ -20,7 +20,11 @@ br {
 #menu a {display:block; width:126px; height:50px; font-size:16px; text-decoration:none; color:#ABABAB; text-align:center; background:url(images/menu_deact.gif) no-repeat; padding-top:6px;}
 #menu a:hover, #menu a.active {background:url(images/menu_act.gif) no-repeat; color:#180202;}
 
-#main {color:#D6D6D6; font-size:11px; line-height:16px;}
+#main {
+	color: #D6D6D6;
+	font-size: 11px;
+	line-height: 16px;
+}
 
 #main ul {padding:0; margin:10px 0;}
 #main li {margin-left:20px;}
