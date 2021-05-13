@@ -54,38 +54,39 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="symmetrynet/sa2020_logo.png" /></div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="rosefusion/s2021_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
       <div style="text-align: center;"> <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-          <span style="font-family: Arial; line-height: 38px">SymmetryNet: Learning to Predict Reflectional and Rotational Symmetries of 3D Shapes from Single-View RGB-D Images<br />
+          <span style="font-family: Arial; line-height: 38px">ROSEFusion: Random Optimization for Online Dense Reconstruction under Fast Camera Motion<br />
           </span></span></font>      </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Yifei Shi<small><sup>1</sup></small>,&nbsp; Junwen Huang<small><sup>1</sup></small>,&nbsp;Hongjia Zhang<small><sup>1</sup></small>,&nbsp;Xin Xu</span><small><sup>1</sup></small><span style="font-family: Arial;">, &nbsp;Szymon Rusinkiewicz<small><sup>2</sup></small></span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">,&nbsp;Kai Xu</span><small><sup>1</sup></small><span style="font-family: Arial;"><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Jiazhao Zhang,&nbsp; Chenyang Zhu,&nbsp;Lintao Zheng,&nbsp;</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu</span><span style="font-family: Arial;"><br />
           <br />
           <br />
-            </span></font><big style="color: rgb(255, 255, 214);"><sup>1</sup>National University of Defense Technology,&nbsp;&nbsp;
-            <sup>2</sup>Princeton University<br />
+            </span></font><big style="color: rgb(255, 255, 214);">National University of Defense Technology<br />
           </big></p>
         <p><big style="color: rgb(253,198,5);">(Kai Xu is the corresponding author.)<br />
           </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font><big style="color: rgb(255, 255, 214);">ACM Transactions
-              on Graphics (SIGGRAPH Asia 2020), 39(6).</big><br />
+              on Graphics (SIGGRAPH 2021), 40(4).</big><br />
           <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
             <br />
             </span></font><br />
         </p>
       </div>
       <div id="main">
-      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="symmetrynet/teaser.jpg" /></div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="rosefusion/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We propose an end-to-end deep neural network learned to predict both reflectional and rotational symmetries from single-view RGB-D images. For
-each example, we show the input RGB-D images with the object of interest segmented out (see the yellow masks) as well as the detection results over the
-unprojected 3D point clouds. Reflectional symmetries are depicted with red planes (reflection plane) and rotational symmetries with green lines (rotation axis).
-Note how our method is able to detect the composition of an arbitrary number of symmetries, possibly of different types, present in the same object.</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We introduce ROSEFusion, a depth-only online dense reconstruction which is stable and robust to highly fast camera motion. Built upon the volumetric
+depth fusion framework, our method solves the highly nonlinear optimization problem of fast-motion camera tracking using random optimization. In this
+example, the depth camera moves at a speed of 2m/s in average and up to 3.6m/s, leading to severe motion blur in RGB images. This sequence would break
+most state-of-the-art online reconstruction methods. Thanks to our novel particle filter optimization with swarm intelligence, our method is able to fuse the
+depth maps (resilient to motion blur) accurately, attaining a satisfying reconstruction quality. See the planar walls and the correct overall layout; the imperfect
+local geometry was mainly due to incomplete depth scanning. The tracked camera trajectory is visualized and color-coded with camera speed.</big></div>
       <br />
       <br />
       <br />
@@ -98,24 +99,31 @@ Note how our method is able to detect the composition of an arbitrary number of 
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">We study the problem of symmetry detection of 3D shapes from single-view
-RGB-D images, where severe missing data renders geometric detection approach
-infeasible. We propose an end-to-end deep neural network which
-is able to predict both reflectional and rotational symmetries of 3D objects
-present in the input RGB-D image. Directly training a deep model for symmetry
-prediction, however, can quickly run into the issue of overfitting. We
-adopt a multi-task learning approach. Aside from symmetry axis prediction,
-our network is also trained to predict symmetry correspondences. In
-particular, given the 3D points present in the RGB-D image, our network
-outputs for each 3D point its symmetric counterpart corresponding to a
-specific predicted symmetry. In addition, our network is able to detect for
-a given shape multiple symmetries of different types. We also contribute a
-benchmark of 3D symmetry detection based on single-view RGB-D images.
-Extensive evaluation on the benchmark demonstrates the strong generalization
-ability of our method, in terms of high accuracy of both symmetry
-axis prediction and counterpart estimation. In particular, our method is
-robust in handling unseen object instances with large variation in shape,
-multi-symmetry composition, as well as novel object categories.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">Online reconstruction based on RGB-D sequences has thus far been restrained
+to relatively slow camera motions (<1m/s). Under very fast camera
+motion (e.g., 3m/s), the reconstruction can easily crumble even for the stateof-
+the-art methods. Fast motion brings two challenges to depth fusion: 1)
+the high nonlinearity of camera pose optimization due to large inter-frame
+rotations and 2) the lack of reliably trackable features due to motion blur.We
+propose to tackle the difficulties of fast-motion camera tracking in the absence
+of inertial measurements using random optimization, in particular, the
+Particle Filter Optimization (PFO). To surmount the computation-intensive
+particle sampling and update in standard PFO, we propose to accelerate the
+randomized search via updating a particle swarm template (PST). PST is
+a set of particles pre-sampled uniformly within the unit sphere in the 6D space of camera pose. Through moving and rescaling the pre-sampled PST
+guided by swarm intelligence, our method is able to drive tens of thousands
+of particles to locate and cover a good local optimum extremely fast and
+robustly. The particles, representing candidate poses, are evaluated with a
+fitness function defined based on depth-model conformance. Therefore, our
+method, being depth-only and correspondence-free, mitigates the motion
+blur impediment as (ToF-based) depths are often resilient to motion blur.
+Thanks to the efficient template-based particle set evolution and the effective
+fitness function, our method attains good quality pose tracking under fast
+camera motion (up to 4m/s) in a realtime framerate without including loop
+closure or global pose optimization. Through extensive evaluations on public
+datasets of RGB-D sequences, especially on a newly proposed benchmark of
+fast camera motion, we demonstrate the significant advantage of our method
+over the state of the arts..</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -134,22 +142,19 @@ multi-symmetry composition, as well as novel object categories.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="http://arxiv.org/abs/2008.00485" target="_blank"><img style="border: 0px solid ; width: 142px" alt="Paper PDF" title="Paper PDF" src="symmetrynet/paper.jpg" /></a></div>
+                  <div id="main2"><a href="http://arxiv.org/abs/2105.05600" target="_blank"><img src="rosefusion/paper.jpg" alt="Paper PDF" height="244" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
-                    <br />
-                    </span></font></p>
+                  </span></font></p>
                     <p>&nbsp;</p>
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="http://arxiv.org/abs/2008.00485" target="_blank">PDF</a></strong></font><br />
+                        <strong><a href="https://arxiv.org/abs/2105.05600" target="_blank">PDF</a></strong></font><br />
                     </p>
                   </td>
                 </tr>
@@ -171,12 +176,12 @@ Slides</small></font></td>
               <tbody>
                 <tr>
                   <td style="vertical-align: top; width: 0px;">
-                  <div id="main2"><a href="../slides/symmetrynet_siga20_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <div id="main2"><a href="../slides/rosefusion_sig20_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
                   </td>
                   <td style="vertical-align: top; width: 354px;"><br />
                   <br />
                   <br />
-                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/symmetrynet_siga20_talk.pdf">PDF</a><br /></strong></font>
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/rosefusion_sig20_talk.pdf">PDF</a><br /></strong></font>
                   </td>
                 </tr>
               </tbody>
@@ -192,37 +197,34 @@ Slides</small></font></td>
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="symmetrynet/1.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="rosefusion/2.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">The pipeline of our proposed symmetry prediction method comprising three major components. Taking an RGB image and a depth image as input,
-the network first extract point-wise appearance and geometry feature maps. The features are then used for point-wise symmetry prediction via multi-task
-learning. The final symmetry predictions are made with symmetry aggregation and visibility-based verification.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Gallery of 3D reconstruction results along with tracked camera trajectories for the twelve real captured fast-motion sequences of FastCaMo-Real. For
+each sequence, we compare the results of ROSEFusion (left), ElasticFusion (middle) and BundleFusion (right). The linear velocity of camera movement is
+color-coded (refer to Figure 1 for color bar) along the trajectories.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img src="symmetrynet/2.jpg" alt="iteration" width="530" height="561" style="width: 750px;" title="iteration" /></div>
+            <div style="text-align: center;"><img src="rosefusion/3.jpg" alt="iteration" width="530" height="561" style="width: 750px;" title="iteration" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Qualitative symmetry prediction results on ScanNet [Dai et al. 2017] and ShapeNet [Chang et al. 2015]. The first column has two images of the
-object, i.e. the input RGB image with the target object marked in green rectangle (upper) and the input depth image (lower). The second column shows the
-ground-truth symmetries of the objects. The last two columns visualize the predicted symmetries by our method. Our method is able to handle objects with
-all forms of symmetry compositions (reflectional symmetry only, rotational symmetry only and multi-symmetry).</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visualization of pose optimization process on three representative frames selected from kt3 of ICL-NUIM, camera_shake_3 of ETH3D-CS and Lab of
+FastCaMo-Real, respectively. In each row, we show two frames with initial poses, the evolution of PST during optimization, and the final alignment result. The
+upper part of the evolution sequence shows the optimization landscape (colored plot) and the exploration path (green curve) of PST. The lower part shows the
+evolution of the 6D PST visualized with a 3D ellipsoid.</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="symmetrynet/3.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="rosefusion/1.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Qualitative comparisons to previous works (Geometric Fitting [Ecins et al. 2018], RGB-D Retrieval, PRS-Net [Gao et al. 2019] and Shape Completion [Li
-et al. 2014; Liu et al. 2019].) on both synthetic data and real data. The Geometric Fitting baseline fails to detect any symmetry. The PRS-Net baseline correctly
-predicts the number of symmetries but fails to regress the parameters of the symmetries accurately. The RGB-D Retrieval baseline could not predict the
-parameters of symmetries correctly. The Shape Completion baseline predicts accurate symmetries for objects with simple geometry, but fails on cases where
-the objects are novel or occluded. Our method achieves the best performance on the four examples.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Comparing percentage of frames under increasing tolerance of translation error of per-frame pose on ten sequences of our FastCaMo-Synth dataset.
+Our method achieves significantly higher success rate of per-frame pose tracking than BundleFusion and ElasticFusion.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
             
@@ -242,9 +244,11 @@ the objects are novel or occluded. Our method achieves the best performance on t
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments.
-This work was supported in part by   National  Key  Research  and Development Program of China (No.  2018AAA0102200) and NSFC (61572507, 61532003,
-61622212) for Kai Xu, and the NSF grant IIS-1815070 for Szymon Rusinkiewicz.</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments and suggestions. We are grateful to Yuefeng Xi and Yao Chen for
+their effort in the preparation of the FastCaMo dataset. This work
+was supported in part by National Key Research and Development
+Program of China (2018AAA0102200), NSFC (61532003, 62002376)
+and NUDT Research Grants (ZK19-30).</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -258,7 +262,7 @@ This work was supported in part by   National  Key  Research  and Development Pr
             <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">The <a href="https://github.com/GodZarathustra/SymmetryNet" target="_blank">GitHub repository</a> hosting the full source code and dataset.</big><big style="color: rgb(255, 255, 214);"><br />
+              <p><big style="color: rgb(255, 255, 214);">The GitHub repository hosting the full source code and dataset is coming.</big><big style="color: rgb(255, 255, 214);"><br />
                 <br />
               </big></p>
             </div>
@@ -274,23 +278,24 @@ This work was supported in part by   National  Key  Research  and Development Pr
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{shi_siga20,<br />
-&nbsp;&nbsp;&nbsp; title = {SymmetryNet: Learning to Predict Reflectional and Rotational Symmetries of 3D Shapes from Single-View RGB-D Images},<br />
+{zhang_sig20,<br />
+&nbsp;&nbsp;&nbsp; title = {ROSEFusion: Random Optimization for Online Dense Reconstruction
+under Fast Camera Motion},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {Yifei Shi and Junwen Huang and Hongjia Zhang and Xin Xu and Szymon Rusinkiewicz and Kai Xu},<br />
+= {Jiazhao Zhang and Chenyang Zhu and Lintao Zheng and Kai Xu},<br />
             &nbsp;&nbsp;&nbsp;
             journal
-= {ACM Transactions on Graphics (SIGGRAPH Asia 2020)},<br />
+= {ACM Transactions on Graphics (SIGGRAPH 2021)},<br />
             &nbsp;&nbsp;&nbsp;
             volume
-= {39},<br />
+= {40},<br />
             &nbsp;&nbsp;&nbsp;
             number
-= {6},<br />
+= {4},<br />
             &nbsp;&nbsp;&nbsp;
             </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
-= {2020}<br />
+= {2021}<br />
 }</font></font></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
           </tr>
@@ -316,9 +321,9 @@ This work was supported in part by   National  Key  Research  and Development Pr
 <div id="footer">
 <div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
 </div>
-<div id="footer_right">Latest update: 2014-03-29 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
-design</a> released by <a href="http://www.flash-gallery.org/">Flash
-Gallery</a></small> </div>
+<div id="footer_right">
+  <div align="right">Latest update: 2021-05-13</div>
+</div>
 </div>
 <!-- end footer --> </div>
 
