@@ -54,39 +54,37 @@ Homepage</a></div>
     <tr>
       <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
       </font>
-      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="rosefusion/s2021_logo.png" /></div>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font><img style="border: 0px solid; width: 200px;" alt="s18_logo" src="ibsgrasp/s2022_logo.png" /></div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
       </span></font>
       <div style="text-align: center;"> <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
-          <span style="font-family: Arial; line-height: 38px">ROSEFusion: Random Optimization for Online Dense Reconstruction under Fast Camera Motion<br />
+          <span style="font-family: Arial; line-height: 38px">Learning High-DOF Reaching-and-Grasping via Dynamic Representation of Gripper-Object Interaction<br />
           </span></span></font>      </div>
       <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
       </font>
       <div style="text-align: center;">
         <p><br />
-          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Jiazhao Zhang,&nbsp; Chenyang Zhu,&nbsp;Lintao Zheng,&nbsp;</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu</span><span style="font-family: Arial;"><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Qijin She, &nbsp; Ruizhen Hu,&nbsp; Juzhan Xu,&nbsp;Min Liu,&nbsp;</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Kai Xu*, Hui Huang*</span><span style="font-family: Arial;"><br />
           <br />
           <br />
-            </span></font><big style="color: rgb(255, 255, 214);">National University of Defense Technology<br />
+            </span></font><big style="color: rgb(255, 255, 214);">National University of Defense Technology, Shenzhen Universities<br />
           </big></p>
-        <p><big style="color: rgb(253,198,5);">(Kai Xu is the corresponding author.)<br />
+        <p><big style="color: rgb(253,198,5);">(Qijin and Ruizhen are co-first authors. Kai and Hui are joint corresponding authors.)<br />
           </big><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font><big style="color: rgb(255, 255, 214);">ACM Transactions
-              on Graphics (SIGGRAPH 2021), 40(4).</big><br />
+              on Graphics (SIGGRAPH 2022), 41(4).</big><br />
           <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
             <br />
             </span></font><br />
         </p>
       </div>
       <div id="main">
-      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="rosefusion/teaser.jpg" /></div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="ibsgrasp/teaser.jpg" /></div>
       <div style="text-align: center;"><br />
-      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We introduce ROSEFusion, a depth-only online dense reconstruction which is stable and robust to highly fast camera motion. Built upon the volumetric
-depth fusion framework, our method solves the highly nonlinear optimization problem of fast-motion camera tracking using random optimization. In this
-example, the depth camera moves at a speed of 2m/s in average and up to 3.6m/s, leading to severe motion blur in RGB images. This sequence would break
-most state-of-the-art online reconstruction methods. Thanks to our novel particle filter optimization with swarm intelligence, our method is able to fuse the
-depth maps (resilient to motion blur) accurately, attaining a satisfying reconstruction quality. See the planar walls and the correct overall layout; the imperfect
-local geometry was mainly due to incomplete depth scanning. The tracked camera trajectory is visualized and color-coded with camera speed.</big></div>
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">Results of our reaching-and-grasping motion planning method for the red camera put on the table given two different initial configurations of the
+gripper shown in green and blue colors, respectively. For each result, we show four key frames of the reaching process and final grasping pose in the middle
+and show the corresponding Interaction Bisector Surfaces (IBSs) used to encode the interactions on the side. Note that we enlarge the distance between the
+gripper and the camera for the frames shown in the middle to show the gripper configurations more clearly.</big></div>
       <br />
       <br />
       <br />
@@ -99,31 +97,7 @@ local geometry was mainly due to incomplete depth scanning. The tracked camera t
             <small> </small></td>
             <td style="vertical-align: top; width: 753px; height: 7px;">
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);">Online reconstruction based on RGB-D sequences has thus far been restrained
-to relatively slow camera motions (<1m/s). Under very fast camera
-motion (e.g., 3m/s), the reconstruction can easily crumble even for the stateof-
-the-art methods. Fast motion brings two challenges to depth fusion: 1)
-the high nonlinearity of camera pose optimization due to large inter-frame
-rotations and 2) the lack of reliably trackable features due to motion blur.We
-propose to tackle the difficulties of fast-motion camera tracking in the absence
-of inertial measurements using random optimization, in particular, the
-Particle Filter Optimization (PFO). To surmount the computation-intensive
-particle sampling and update in standard PFO, we propose to accelerate the
-randomized search via updating a particle swarm template (PST). PST is
-a set of particles pre-sampled uniformly within the unit sphere in the 6D space of camera pose. Through moving and rescaling the pre-sampled PST
-guided by swarm intelligence, our method is able to drive tens of thousands
-of particles to locate and cover a good local optimum extremely fast and
-robustly. The particles, representing candidate poses, are evaluated with a
-fitness function defined based on depth-model conformance. Therefore, our
-method, being depth-only and correspondence-free, mitigates the motion
-blur impediment as (ToF-based) depths are often resilient to motion blur.
-Thanks to the efficient template-based particle set evolution and the effective
-fitness function, our method attains good quality pose tracking under fast
-camera motion (up to 4m/s) in a realtime framerate without including loop
-closure or global pose optimization. Through extensive evaluations on public
-datasets of RGB-D sequences, especially on a newly proposed benchmark of
-fast camera motion, we demonstrate the significant advantage of our method
-over the state of the arts.</big><br />
+              <p><big style="color: rgb(255, 255, 214);">We approach the problem of high-DOF reaching-and-grasping via learning joint planning of grasp and motion with deep reinforcement learning. To resolve the sample efficiency issue in learning the high-dimensional and complex control of dexterous grasping, we propose an effective representation of grasping state characterizing the spatial interaction between the gripper and the target object. To represent gripper-object interaction, we adopt Interaction Bisector Surface (IBS) which is the Voronoi diagram between two close by 3D geometric objects and has been successfully applied in characterizing spatial relations between 3D objects. We found that IBS is surprisingly effective as a state representation since it well informs the fine-grained control of each finger with spatial relation against the target object. This novel grasp representation, together with several technical contributions including a fast IBS approximation, a novel vector-based reward and an effective training strategy, facilitate learning a strong control model of high-DOF grasping with good sample efficiency, dynamic adaptability, and cross-category generality. Experiments show that it generates high-quality dexterous grasp for complex shapes with smooth grasping motions.</big><br />
                 <big style="color: rgb(255, 255, 214);"> </big></p>
             </div>
             </td>
@@ -142,7 +116,7 @@ over the state of the arts.</big><br />
               <tbody>
                 <tr>
                   <td height="228" style="vertical-align: top; width: 122px;">
-                  <div id="main2"><a href="http://arxiv.org/abs/2105.05600" target="_blank"><img src="rosefusion/paper.jpg" alt="Paper PDF" height="244" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
+                  <div id="main2"><a href="papers/she_sig22_ibsgrasp.pdf" target="_blank"><img src="ibsgrasp/paper.jpg" alt="Paper PDF" height="244" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
                   </td>
                   <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                     <br />
@@ -154,7 +128,7 @@ over the state of the arts.</big><br />
                     <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
                       <br />
                       </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
-                        <strong><a href="https://arxiv.org/abs/2105.05600" target="_blank">PDF</a></strong></font><br />
+                        <strong><a href="papers/she_sig22_ibsgrasp.pdf" target="_blank">PDF</a></strong></font><br />
                     </p>
                   </td>
                 </tr>
@@ -176,12 +150,12 @@ Slides</small></font></td>
               <tbody>
                 <tr>
                   <td style="vertical-align: top; width: 0px;">
-                  <div id="main2"><a href="../slides/rosefusion_sig21_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  <div id="main2"><a href="../slides/ibsgrasp_sig22_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
                   </td>
                   <td style="vertical-align: top; width: 354px;"><br />
                   <br />
                   <br />
-                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/rosefusion_sig21_talk.pdf">PDF</a><br /></strong></font>
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/ibsgrasp_sig22_talk.pdf">PDF</a><br /></strong></font>
                   </td>
                 </tr>
               </tbody>
@@ -197,34 +171,51 @@ Slides</small></font></td>
           <tr>
             <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
             <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="rosefusion/2.jpg" /></div>
+            <div style="text-align: center;"><img style="width: 750px;" alt="Compare" title="Compare" src="ibsgrasp/1.jpg" /></div>
             <div style="text-align: center;"><br />
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Gallery of 3D reconstruction results along with tracked camera trajectories for the twelve real captured fast-motion sequences of FastCaMo-Real. For
-each sequence, we compare the results of ROSEFusion (left), ElasticFusion (middle) and BundleFusion (right). The linear velocity of camera movement is
-color-coded (refer to Figure 1 for color bar) along the trajectories.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Overview of one iteration of our grasping motion planning method. Given an object in a scene context with the current gripper configuration, our
+method first generates the sampled IBS to represent the interaction between the scene and gripper, then a set of local and global features are extracted from
+the given state to predict the action that changes the configuration of the gripper so that it moves closer to the given object and forms a better grasping. The
+updated configuration after applying the predicted action is then passed through the same pipeline to predict the subsequent action.</big></div>
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img src="rosefusion/3.jpg" alt="iteration" width="530" height="561" style="width: 750px;" title="iteration" /></div>
+            <div style="text-align: center;"><img src="ibsgrasp/2.jpg" alt="iteration" width="530" height="561" style="width: 750px;" title="iteration" /></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visualization of pose optimization process on three representative frames selected from kt3 of ICL-NUIM, camera_shake_3 of ETH3D-CS and Lab of
-FastCaMo-Real, respectively. In each row, we show two frames with initial poses, the evolution of PST during optimization, and the final alignment result. The
-upper part of the evolution sequence shows the optimization landscape (colored plot) and the exploration path (green curve) of PST. The lower part shows the
-evolution of the 6D PST visualized with a 3D ellipsoid.</big><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Gallery of results obtained with our method, where we show the
+input initial configuration of the gripper and four sampled frames during the
+approaching process with the final grasping pose on the right. The moving
+trajectory of the whole reach-and-grasp process is shown with the purple
+curve for each example.</big><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
             <br />
             </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="rosefusion/1.jpg" /><br />
+            <div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="ibsgrasp/3.jpg" /><br />
             </div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
-            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Comparing percentage of frames under increasing tolerance of translation error of per-frame pose on ten sequences of our FastCaMo-Synth dataset.
-Our method achieves significantly higher success rate of per-frame pose tracking than BundleFusion and ElasticFusion.</big></div>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Example results where we fix the shape and plan the grasping with
+different initial gripper configurations. For each example, we show all four
+different initial configurations on the aligned hemisphere with purple dot
+on the left, and then their final grasping poses on the right.</big></div>
+<font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+
+<div style="text-align: center;"><img style="width: 750px;" alt="Comparison" title="Comparison" src="ibsgrasp/4.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visual comparisons to two-step baseline method with “grasp synthesis
++ motion planning” . For each example, we show the final grasp
+synthesized by each method on the left and several key frames of the reachand-
+grasp process with the offline planned trajectory in purple on the right.</big></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
             </font>
             
@@ -244,11 +235,14 @@ Our method achieves significantly higher success rate of per-frame pose tracking
           <tr>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
-            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments and suggestions. We are grateful to Yuefeng Xi and Yao Chen for
-their effort in the preparation of the FastCaMo dataset. This work
-was supported in part by National Key Research and Development
-Program of China (2018AAA0102200), NSFC (61532003, 62002376)
-and NUDT Research Grants (ZK19-30).</big></div>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">We thank the anonymous reviewers for their valuable comments and suggestions. This work was supported in parts by NSFC (61872250, 62132021,
+U2001206, U21B2023, 62161146005), GD Talent Plan (2019JC05X328),
+GD Natural Science Foundation (2021B1515020085), DEGP Key
+Project (2018KZDXM058, 2020SFKC059), National Key R&D Program
+of China (2018AAA0102200), Shenzhen Science and Technology
+Program (RCYX20210609103121030, RCJC20200714114435012,
+JCYJ20210324120213036), and Guangdong Laboratory of Artificial
+Intelligence and Digital Economy (SZ).</big></div>
             <big style="color: rgb(255, 255, 214);"> </big></td>
           </tr>
           <tr>
@@ -262,7 +256,7 @@ and NUDT Research Grants (ZK19-30).</big></div>
             <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
             <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
             <div style="text-align: justify; margin-left: 8px; width: 750px;">
-              <p><big style="color: rgb(255, 255, 214);"><a href="https://github.com/jzhzhang/ROSEFusion" target="_blank">The GitHub repository</a> hosting the full source code and dataset.</big><big style="color: rgb(255, 255, 214);"><br />
+              <p><big style="color: rgb(255, 255, 214);">The GitHub repository hosting the full source code and dataset is coming.</big><big style="color: rgb(255, 255, 214);"><br />
                 <br />
               </big></p>
             </div>
@@ -278,24 +272,24 @@ and NUDT Research Grants (ZK19-30).</big></div>
             <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
             <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
             <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
-{zhang_sig20,<br />
-&nbsp;&nbsp;&nbsp; title = {ROSEFusion: Random Optimization for Online Dense Reconstruction
-under Fast Camera Motion},<br />
+{she_sig22,<br />
+&nbsp;&nbsp;&nbsp; title = {Learning High-DOF Reaching-and-Grasping via Dynamic
+Representation of Gripper-Object Interaction},<br />
             &nbsp;&nbsp;&nbsp;
             author
-= {Jiazhao Zhang and Chenyang Zhu and Lintao Zheng and Kai Xu},<br />
+= {Qijin She and Ruizhen Hu and Juzhan Xu and Min Liu and Kai Xu and Hui Huang},<br />
             &nbsp;&nbsp;&nbsp;
             journal
-= {ACM Transactions on Graphics (SIGGRAPH 2021)},<br />
+= {ACM Transactions on Graphics (SIGGRAPH 2022)},<br />
             &nbsp;&nbsp;&nbsp;
             volume
-= {40},<br />
+= {41},<br />
             &nbsp;&nbsp;&nbsp;
             number
 = {4},<br />
             &nbsp;&nbsp;&nbsp;
             </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
-= {2021}<br />
+= {2022}<br />
 }</font></font></div>
             <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
           </tr>
