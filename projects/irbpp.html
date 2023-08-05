@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Irregular Bin Packing - Kevin (Kai) Xu's Homepage</title>
+  
+
+  
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  
+  <link href="style_pub.css" rel="stylesheet" type="text/css" />
+
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10108777-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body>
+<div id="container">
+<!-- header -->
+<div style="font-weight: bold;" id="logo"><a href="#">Kevin (Kai) Xu's
+Homepage</a></div>
+<div id="menu">
+<ul>
+  <li style="font-weight: bold;"><a href="../index.html">Home</a></li>
+  <li style="font-weight: bold;"><a href="../research.html" class="active">Research</a></li>
+  <li style="font-weight: bold;"><a href="../publications.html">Publications</a></li>
+  <li style="font-weight: bold;"><a href="../group.html">Group</a></li>
+  <li style="font-weight: bold;"><a href="../contact.html">Contact Me</a></li>
+</ul>
+</div>
+<!--end header -->
+<!-- main -->
+<div id="main">
+<div id="text_top"><span style="font-weight: bold;"><br />
+</span>
+<br />
+<br />
+<table style="text-align: left; height: 50px; margin-left: 0px; width: 950px;" border="0" cellpadding="0" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: justify; width: 944px;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><br />
+      </font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;" /></font></div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"><span style="font-weight: bold;"> <br />
+      </span></font>
+      <div style="text-align: center;"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-weight: bold;"><br />
+      <span style="font-family: Arial; line-height: 38px">Learning Physically Realizable Skills for Online Packing
+of General 3D Shapes<br />
+      </span></span></font> </div>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="4"> <br />
+      </font>
+      <div style="text-align: center;">
+        <p><br />
+          <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;">Hang Zhao,&nbsp; Zherong Pan,&nbsp;Yang Yu,&nbsp;Kai Xu*</span></font><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+1"><span style="font-family: Arial;"><br />
+          <br />
+          <br />
+            </span></font><big style="color: rgb(255, 255, 214);">ACM Transactions
+              on Graphics (to be presented at SIGGRAPH 2024)</big><br />
+              <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <span style="font-style: italic;"><br />
+            <br />
+              </span></font><br />
+        </p>
+      </div>
+      <div style="text-align: center;"><img style="width: 900px;" alt="teaser" src="irbpp/teaser.jpg" /></div>
+      <div style="text-align: center;"><br />
+      <div style="text-align: justify; margin-left: auto; margin-right:auto; width: 899px;"><big style="color: rgb(255, 255, 214);">We develop a learning-based solver for packing arbitrarily-shaped objects in a physically realizable problem setting. This figure shows an online virtual
+packing setup (a), where objects move on a conveyor belt at a constant speed. Three RGB-D cameras are provided for observing the top and bottom surfaces of
+the incoming object as well as packed object configurations inside the container. Within a limited time window, the robot has to decide on the placement for
+the incoming object in the target container for tight packing. Packing results on 3D shapes with different geometric properties are shown in (b).</big></div>
+      <br />
+      <br />
+      <br />
+      <table style="text-align: left; width: 872px; margin-left: 34px; height: 744px;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; width: 99px; height: 7px;"><small>
+            </small>
+            <div style="text-align: right;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Abstract</small></font></small></div>
+            <small> </small></td>
+            <td style="vertical-align: top; width: 753px; height: 7px;">
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">We study the problem of learning online packing skills for irregular 3D shapes,
+which is arguably the most challenging setting of bin packing problems. The
+goal is to consecutively move a sequence of 3D objects with arbitrary shapes
+into a designated container with only partial observations of the object
+sequence. Meanwhile, we take physical realizability into account, involving
+physics dynamics and constraints of a placement. The packing policy should
+understand the 3D geometry of the object to be packed and make effective
+decisions to accommodate it in the container in a physically realizable way.
+We propose a Reinforcement Learning (RL) pipeline to learn the policy. The
+complex irregular geometry and imperfect object placement together lead
+to huge solution space. Direct training in such space is prohibitively data ntensive. We instead propose a theoretically-provable method for candidate
+action generation to reduce the action space of RL and the learning burden.
+A parameterized policy is then learned to select the best placement from the
+candidates. Equipped with an efficient method of asynchronous RL accelera-
+tion and a data preparation process of simulation-ready training sequences,
+a mature packing policy can be trained in a physics-based environment
+within 48 hours. Through extensive evaluation on a variety of real-life shape
+datasets and comparisons with state-of-the-art baselines, we demonstrate
+that our method outperforms the best-performing baseline on all datasets
+by at least 12.8% in terms of packing utility. </big><br />
+                <big style="color: rgb(255, 255, 214);"> </big></p>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; height: 134px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
+            <small>Paper</small></font></td>
+            <td style="vertical-align: top; height: 134px; width: 753px;">
+            <table width="600" border="0" cellpadding="2" cellspacing="2" style="text-align: left; height: 235px; width: 580px;">
+              <tbody>
+                <tr>
+                  <td height="228" style="vertical-align: top; width: 122px;">
+                  <div id="main2"><a href="https://arxiv.org/pdf/2212.02094"><img src="irbpp/paper.jpg" alt="Paper PDF" width="152" height="274" style="border: 0px solid ; width: 142px" title="Paper PDF" /></a></div>
+                  </td>
+                  <td width="530" style="vertical-align: top; width: 408px;"><p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    </span></font></p>
+                    <p>&nbsp;</p>
+                    <p><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><span style="font-weight: bold;"><br />
+                      <br />
+                      </span></font><font style="color: rgb(255, 255, 214);" size="3"><br />
+                        <strong><a href="https://arxiv.org/pdf/2212.02094">PDF</a></strong></font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"></span></font><br />
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 7px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 7px; width: 753px;"><br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><br />
+Slides</small></font></td>
+            <td style="vertical-align: top; width: 753px;">
+            <table style="text-align: left; width: 427px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; width: 0px;">
+                  <div id="main2"><a href="../slides/irbpp_tog23_talk.pdf" target="_blank"><img style="width: 45px; height: 92px;" alt="Conference Slides" title="Conference Slides" src="../icons/PPT.png" /></a></div>
+                  </td>
+                  <td style="vertical-align: top; width: 354px;"><br />
+                  <br />
+                  <br />
+                  <font style="color: rgb(255, 255, 214);" size="3"><strong><a href="../slides/irbpp_tog23_talk.pdf">PDF</a><br /></strong></font>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; height: 29px; width: 99px;"><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><br />
+            <small>Video</small></font></td>
+            <td style="vertical-align: top; height: 29px; width: 753px;">
+            <table style="text-align: left; height: 104px; width: 764px;" border="0" cellpadding="2" cellspacing="2">
+              <tbody>
+                
+          <tr>
+            <td style="vertical-align: top; height: 9px; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; height: 9px; width: 753px;">&nbsp;</td>
+          </tr>
+          
+          <tr>
+            <td style="vertical-align: top; height: 392px; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Images</small></font></small></td>
+            <td style="vertical-align: top; height: 392px; width: 753px;"> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> </font>
+            <div style="text-align: center;"><img style="width: 750px;" alt="result1" title="result1" src="irbpp/1.jpg" /></div>
+            <div style="text-align: center;"><br />
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Our policy learning architecture. The input to our method is the surface point cloud (a) of the incoming object and the heightmap (b) of continuous
+object configurations in the target container. Our neural network policy uses PointNet (d) and CNN (e) to extract features of object and container respectively
+for 3D geometry understanding. Our geometric-inspired candidate generalization method would then provide a set of placements (c), each encoded as a feature using an MLP (f). Finally, our policy which is a dueling network ranks the placement candidates via the state-action value function, and the best
+candidate is selected for execution. The continuous object configurations inside the target container are governed by a physics simulator (g). The packing
+process continues with receiving the next observation until the container is full. Our RL algorithm trains the ranking policy by asynchronously sampling
+trajectories and updating policy parameters with granted reward signals.</big></div>
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 750px;" alt="result2" title="result2" src="irbpp/2.jpg" /></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Visualization of various packing methods on three datasets. Each test instance is labeled with its utility/number of packed objects. Our learned policy
+consistently exhibits tight packing and achieves the best performance.</big><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"> <br />
+            <br />
+            </font> <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: center;"><img style="width: 750px;" alt="result3" title="result3" src="irbpp/3.jpg" /><br />
+            </div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            <div style="text-align: justify; margin-left: 9px; width: 750px;"><big style="color: rgb(255, 255, 214);">Results generated by our online packing policies. Their utility and number of packed objects are labeled.</big></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-0"><br />
+            </font>
+            
+            
+            
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Thanks</small></font></small></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;"><big style="color: rgb(255, 255, 214);">The authors acknowledge the anonymous reviewers for their insightful comments and valuable suggestions. Thanks are also extended
+to Yin Yang, Qijin She, Juzhan Xu, Lintao Zheng, and Jun Li for their
+helpful discussions. Hang thanks Tong Zhang with heartfelt appre-
+ciation for her support, understanding, and encouragement. This
+work is supported by the National Key Research and Development
+Program of China (2018AAA0102200), and the National Natural
+Science Foundation of China (62132021, 62102435).</big></div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br />
+            <br />
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><p><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small><a name="code">Code<br>Data</a></small></font></small></p></td>
+            <td style="vertical-align: top; text-align: justify; width: 753px;"><big style="color: rgb(255, 255, 214);"> </big>
+            <div style="text-align: justify; margin-left: 8px; width: 750px;">
+              <p><big style="color: rgb(255, 255, 214);">The <a href="https://github.com/alexfrom0815/IR-BPP" target="_blank">GitHub repository</a> hosting the full source code and dataset. </big><big style="color: rgb(255, 255, 214);"><br />
+              </big></p>
+            </div>
+            <big style="color: rgb(255, 255, 214);"> </big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 99px;"><br />
+            </td>
+            <td style="vertical-align: top; width: 753px;"><br /></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: right; width: 99px;"><small><font style="color: rgb(255, 255, 214); font-family: Arial Black;" size="+2"><small>Bibtex</small></font></small></td>
+            <td style="vertical-align: top; width: 753px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font>
+            <div style="text-align: left; margin-left: 6px; width: 730px;"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">@article
+{zhao_tog23,<br />
+&nbsp;&nbsp;&nbsp; title = {Learning Physically Realizable Skills for Online Packing of General 3D Shapes},<br />
+            &nbsp;&nbsp;&nbsp;
+            author
+= {Hang Zhao and Zherong Pan and Yang Yu and Kai Xu},<br />
+            &nbsp;&nbsp;&nbsp;
+            journal
+= {ACM Transactions on Graphics},<br />
+            &nbsp;&nbsp;&nbsp;
+            volume
+= {42},<br />
+            &nbsp;&nbsp;&nbsp;
+            number
+= {5},<br />
+            &nbsp;&nbsp;&nbsp;
+            </font><font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1">year
+= {2023}<br />
+}</font></font></div>
+            <font style="color: rgb(255, 255, 214); font-family: Arial;" size="-1"> </font></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <br />
+      <br />
+      <br />
+      <ul>
+      </ul>
+      <div style="text-align: center;"><a href="http://english.nudt.edu.cn/"> </a></div>
+      <ul style="text-align: center;">
+        <a href="http://english.nudt.edu.cn/"><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"><span style="font-family: Arial;" /></font></a><a href="#menu"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Back to Top" title="Back to top" src="../icons/back_to_top.png" /></a><a href="../index.html"><img style="border: 0px solid ; width: 121px; height: 40px;" alt="Home" title="Home" src="../icons/home.png" /></a><font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2"> </font>
+      </ul>
+      <font style="color: rgb(255, 255, 214); font-family: Tahoma;" size="+2">&nbsp; </font></td>
+    </tr>
+  </tbody>
+</table>
+<b><br />
+</b> </div>
+</div>
+<!-- end main -->
+<!-- footer -->
+<div id="footer">
+<div id="footer_left">© Copyright 2011 Kevin (Kai) Xu<br />
+</div>
+<div id="footer_right">Latest update: 2023-08-04 &nbsp; <small><a href="http://www.realitysoftware.ca/services/website-development/design/">Web
+design</a> released by <a href="http://www.flash-gallery.org/">Flash
+Gallery</a></small> </div>
+</div>
+<!-- end footer --> </div>
+
+</body></html>
